@@ -17,15 +17,13 @@ repository:
   # role. If there are questions, please contact one of the chairs.
 collaborators:
   # Chairs and Admin Help
-  - username: nellshamrell
+  - username: 
     permission: admin
-  - username: walterpearce
-    permission: admin
-  - username: SecurityCRob
-    permission: admin
-  - username: david-a-wheeler
-    permission: admin
-  - username: balteravishay
+
+    # Contributors
+    # all permissions except admin
+
+  - username: 
     permission: push
 
 labels:

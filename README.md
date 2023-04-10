@@ -44,16 +44,16 @@ Develop pragmatic guidance, standards, and software (including tools, tool impro
 The [CHARTER.md](CHARTER.md) outlines the scope and governance of our group activities.
 
 * Lead name: [Nell Shamrell-Harrington](https://github.com/nellshamrell)
-* Co-Lead name: [Walter Pearce](https://github.com/walterpearce)
+* Co-Lead name: [Avishay Balter, Microsoft](https://github.com/balteravishay)
 
 ### SIG Maintainers
 
 * [Christopher "CRob" Robinson, Intel](https://github.com/SecurityCRob)
 * [David A Wheeler, LF/OSSF](https://github.com/david-a-wheeler)
-* [Avishay Balter, Microsoft](https://github.com/balteravishay)
 
 ### SIG Collaborators
 
+* [Walter Pearce](https://github.com/walterpearce)
 * [Randall T. Vasquez, Gentoo/Homebrew](https://github.com/ran-dall)
 * [Jay White, Microsoft](https://github.com/camaleon2016)
 * [Christine Abernathy, F5](https://github.com/caabernathy)
