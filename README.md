@@ -1,82 +1,82 @@
-# **OSSF Project/WG Name**
+# **OpenSSF Memory Safety Special Interest Group (SIG)**
 
-[Brief description of the initiative]
+The Memory Safety SIG is a group working within the [OpenSSF's Best Practices Working Group](https://github.com/ossf/wg-best-practices-os-developers) formed to advance and deliver upon [The OpenSSF's Mobilization Plan - Stream 4](https://8112310.fs1.hubspotusercontent-na1.net/hubfs/8112310/OpenSSF/White%20House%20OSS%20Mobilization%20Plan.pdf?hsCtaTracking=3b79d59d-e8d3-4c69-a67b-6b87b325313c%7C7a1a8b01-65ae-4bac-b97c-071dac09a2d8).
 
+## **Motivation**
 
-## 
-**Motivation**
+Memory safety vulnerabilities, caused by mistakes in memory management, are common in unsafe programming languages like C and C++.This type of vulnerability is responsible for a majority of security breaches, with estimates from Microsoft and Google showing that up to 70% and 90% of vulnerabilities in their products, respectively, are memory safety vulnerabilities. 
 
-[Background / use cases of the problem to be solved]
+Safe languages like Rust, Go, and Java are less prone to these types of errors. The consequences of these vulnerabilities are not just technical, but can result in significant financial losses and invasion of personal data and privacy. A recent analysis by Google Project Zero showed that 67% of vulnerabilities exploited in the wild were due to a lack of memory safety, making it a critical issue that needs to be addressed in software development.
 
+## **Objective**
 
-## 
-**Objective**
+**Vision**: Eliminate memory safety vulnerabilities (in Open Source Software (OSS).
 
-[What is to be achieved with this initiative]
+**Mission**: Understand and reduce memory safety vulnerabilities in OSS.
 
-[OKRs - OPTIONAL]
+## **Scope**
 
+Develop pragmatic guidance, standards, and software (including tools, tool improvements, and rewrites), along with advocating such changes, to systematically reduce memory safety vulnerabilities through the use of memory-safe programming languages and techniques, all informed by real-world data and risks.
 
-## 
-**Scope**
+## **Prior Work**
 
-[What is in and out of scope]
+* N/A
 
+## **Get Involved**
 
-## 
-**Prior Work**
-
-
-
-*   List of prior and/or related projects
-
-# 
-**Get Involved**
-
-*   Official communications occur on the [ADD LINK TO YOUR WG MAILING LIST] (ex: https://lists.openssf.org/g/openssf-tac/topics).  \
+* Official communications occur on the [openssf-sig-memory-safety@lists.openssf.org](https://lists.openssf.org/g/openssf-sig-memory-safety/topics).  \
 [Manage your subscriptions to Open SSF mailing lists](https://lists.openssf.org/g/main/subgroups).
-*   [Add Slack information if availabable]
+* [Memory Safety SIG Slack](https://openssf.slack.com/archives/C03G8NZH58R)
 
-### 
-Quick Start
+### Quick Start
 
-*   Areas that need contributions
-*   Build information if applicable
-*   Where to file issues
-*   Etc.
+* Areas that need contributions
+* [ ] Review of the Proposed Stream #4 Mobilization Plan
+* [File issues](https://github.com/ossf/Memory-Safety/issues)
 
-## 
-**Meeting times**
+## **Meeting times**
 
-[TODO: Update with your WG meeting details]
-*   Every other Tuesday @ 10:00am PST (Link to calendar invite)
-*   [Meeting Minutes](https://docs.google.com/document/d/1uXQI1vI5_HyOvxHMexrnTY_ruBrynbPl5yOd1UM4g3A/edit#heading=h.yworp6sxzb6g)
+* Every other Thursday @ 13:00am EST. The invite is available on the [OpenSSF Community Calendar](https://calendar.google.com/calendar/u/0/r?cid=czYzdm9lZmhwNWk5cGZsdGI1cTY3bmdwZXNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ).
+* [Meeting Minutes](https://docs.google.com/document/d/1Ehpp1UmAIqMs0ZdKr15sd5MS48OeaGKB9H40htVehs4)
 
-# 
-**Governance**
+## **Governance**
 
-[TODO: Update this link to your specific CHARTER.md file]
-The [CHARTER.md](https://github.com/ossf/project-template/blob/main/CHARTER.md) outlines the scope and governance of our group activities.
+The [CHARTER.md](CHARTER.md) outlines the scope and governance of our group activities.
 
+* Lead name: [Nell Shamrell-Harrington](https://github.com/nellshamrell)
+* Co-Lead name: [Walter Pearce](https://github.com/walterpearce)
 
-[OPTIONAL]
-*   Lead name 
-*   Co-Lead name
+### SIG Maintainers
 
-#
-**Intellectual Property**
+* [Christopher "CRob" Robinson, Intel](https://github.com/SecurityCRob)
+* [David A Wheeler, LF/OSSF](https://github.com/david-a-wheeler)
+* [Avishay Balter, Microsoft](https://github.com/balteravishay)
+
+### SIG Collaborators
+
+* [Randall T. Vasquez, Gentoo/Homebrew](https://github.com/ran-dall)
+* [Jay White, Microsoft](https://github.com/camaleon2016)
+* [Christine Abernathy, F5](https://github.com/caabernathy)
+* [Gabriel Dos Reis (Microsoft)](https://github.com/GabrielDosReis)
+* [Josh Aas (he/him, ISRG/Prossimo)](https://github.com/bdaehlie)
+* [Jonathan Leitschuh (he/him) OpenSSF](https://github.com/JLLeitschuh)
+
+## **Intellectual Property**
 
 In accordance with the [OpenSSF Charter (PDF)](https://charter.openssf.org/), work produced by this group is licensed as follows:
 
-[TODO: Select below the applicable license(s), delete those that don't apply, and update the LICENSE file accordingly. For specification development refer to the specific instructions on the [Community Specification Getting Started page](https://github.com/CommunitySpecification/1.0/blob/main/..Getting%20Started.md).
-
-Note that for source code, instead of Apache, you may choose to use the MIT License available at https://opensource.org/licenses/MIT. Otherwise, no other license than those listed here may be used without approval from the Governing Board.]
-
 1. Software source code
-* Apache License, Version 2.0, available at https://www.apache.org/licenses/LICENSE-2.0;
+
+    * Apache License, Version 2.0, available [here](https://www.apache.org/licenses/LICENSE-2.0);
+
 2. Data
-* Any of the Community Data License Agreements, available at https://www.cdla.io;
+
+    * Any of the Community Data License Agreements, available [here](https://www.cdla.io);
+
 3. Specifications
-* Community Specification License, Version 1.0, available at https://github.com/CommunitySpecification/1.0
+
+    * Community Specification License, Version 1.0, available [here](https://github.com/CommunitySpecification/1.0)
+
 4. All other Documentation
-* Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/
+
+    * Creative Commons Attribution 4.0 International License, available [here](https://creativecommons.org/licenses/by/4.0/)

@@ -2,10 +2,10 @@ repository:
   # See https://developer.github.com/v3/repos/#edit for all available settings.
 
   # The name of the repository. Changing this will rename the repository
-  name: project-template
+  name: memory-safety
 
   # A short description of the repository that will show up on GitHub
-  description: OpenSSF Project Template
+  description: OpenSSF Memory Safety SIG
 
   # A URL with more information about the repository
   homepage: https://openssf.org
@@ -17,13 +17,15 @@ repository:
   # role. If there are questions, please contact one of the chairs.
 collaborators:
   # Chairs and Admin Help
-  - username: 
+  - username: nellshamrell
     permission: admin
-
-    # Contributors
-    # all permissions except admin
-
-  - username: 
+  - username: walterpearce
+    permission: admin
+  - username: SecurityCRob
+    permission: admin
+  - username: david-a-wheeler
+    permission: admin
+  - username: balteravishay
     permission: push
 
 labels:
