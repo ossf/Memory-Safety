@@ -44,13 +44,12 @@ Develop pragmatic guidance, standards, and software (including tools, tool impro
 The [CHARTER.md](CHARTER.md) outlines the scope and governance of our group activities.
 
 * Lead name: [Nell Shamrell-Harrington](https://github.com/nellshamrell)
-* Co-Lead name:
+* Co-Lead name: [Avishay Balter, Microsoft](https://github.com/balteravishay)
 
 ### SIG Maintainers
 
 * [Christopher "CRob" Robinson, Intel](https://github.com/SecurityCRob)
 * [David A Wheeler, LF/OSSF](https://github.com/david-a-wheeler)
-* [Avishay Balter, Microsoft](https://github.com/balteravishay)
 
 ### SIG Collaborators
 
