@@ -29,7 +29,7 @@ The work we plan to do to reduce the number of memory safety vulnerabilities con
 
 1. Wherever possible, move the internet’s most critical software to memory safe by default languages with an efficient strategy that emphasizes upgrading the most security-sensitive components first.
 2. Invest in the tools that allow systems engineers to move lower-level systems-level code to a memory safe by default language. This will allow us to have impact beyond just the most critical projects. We will focus on tools for systems-level code because it is the most ubiquitous and vulnerable software in the ecosystem, and it is the most likely to be written in memory unsafe by default languages.
-3. Invest in tools/specifications that improve memory safety when a migration to a memory safe by default language is not possible [^1].
+3. Invest in tools/specifications that improve memory safety when a migration to a memory safe by default language is not possible [^5].
 4. Invest in educating software engineers at all levels about the importance of memory safety and that skills for reliably and securely engineering computer software are critical
 
 [^5]: https://github.com/isocpp/CppCoreGuidelines
@@ -47,10 +47,10 @@ The top-level risk criteria that Prossimo uses to identify potential investments
 
 Of software that fits those criteria, the following opportunity criteria are evaluated:
 
-1. Is this a library or component that can be used in many different projects? 
-2. Can we efficiently replace key components with existing memory safe libraries? 
-3. Are funders willing to fund the work? 
-4. Are the maintainers on board and cooperative? 
+1. Is this a library or component that can be used in many different projects?
+2. Can we efficiently replace key components with existing memory safe libraries?
+3. Are funders willing to fund the work?
+4. Are the maintainers on board and cooperative?
 
 Based on all of the above criteria, there are Prossimo initiatives underway for the Linux kernel and applications and libraries related to Transport Layer Security (TLS), Domain Name System (DNS), and Network Time Protocol (NTP).
 
@@ -71,4 +71,3 @@ TO DO - need examples.
 ### Invest in Education
 
 TO DO
-
