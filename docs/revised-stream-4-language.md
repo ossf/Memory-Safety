@@ -70,4 +70,9 @@ TO DO - need examples.
 
 ### Invest in Education
 
-TO DO
+It is important to not only provide tooling for developers to develop memory-safely, but sharing HOW and WHY to do so is equally of value.  There are several areas where educational materials, training, and job aids should be identified or created to help developers quickly learn about memory safe languages, how to use more memory-safe coding techniques in older languages, as well as the threats and vulnerabilities non-memory-safe coding practices can incur.  We propose to create a reference library and educationcal materials on:
+- the threats and vulnerabilities that exist around memory safety coding flaws
+- the benefits of developing using memory safe languages
+- references to authoritative guides for memory-safe languages
+-  educational training material for older languages, such as C & C++, on how to develop with using memory-safety technigues and safe memory handling practices
+-  through blogs, podcasts, conference presentations, and training classes, spread education awareness and skills in the area of memory safe development languages and secure coding techniques
