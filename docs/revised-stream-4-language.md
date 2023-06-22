@@ -71,3 +71,7 @@ TO DO - need examples.
 ### Invest in Education
 
 TO DO
+
+### Challenges
+
+Many memory-safe languages have dependency models that are very different from C, often resulting larger dependency chains. Operating systems may find it challenging to incorporate larger dependency chains under their current models for dependency management. In order for more memory-safe software to gain widespread adoption as part of operating systems, the operating systems will have to re-think their views and approaches to managing larger numbers of dependencies and/or we will have to find ways to significantly reduce the number of dependencies.
