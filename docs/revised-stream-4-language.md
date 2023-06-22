@@ -74,5 +74,5 @@ It is important to not only provide tooling for developers to develop memory-saf
 - the threats and vulnerabilities that exist around memory safety coding flaws
 - the benefits of developing using memory safe languages
 - references to authoritative guides for memory-safe languages
--  educational training material for older languages, such as C & C++, on how to develop with using memory-safety technigues and safe memory handling practices
+-  educational training material for older languages, such as C & C++, on how to develop using memory-safety techniques and safe memory handling practices
 -  through blogs, podcasts, conference presentations, and training classes, spread education awareness and skills in the area of memory safe development languages and secure coding techniques
