@@ -74,4 +74,10 @@ TO DO
 
 ### Challenges
 
-Many memory-safe languages have dependency models that are very different from C, often resulting larger dependency chains. Operating systems may find it challenging to incorporate larger dependency chains under their current models for dependency management. In order for more memory-safe software to gain widespread adoption as part of operating systems, the operating systems will have to re-think their views and approaches to managing larger numbers of dependencies and/or we will have to find ways to significantly reduce the number of dependencies.
+#### Dependency Chains
+
+Many memory safe languages (e.g. Rust, Go, Python) have relatively advanced package management models, including more advanced dependency management tools. This leads to dependency chains that are typically significantly larger than those of equivalent C programs.
+
+Longer dependency chains are not necessarily specific to memory safe languages. However, since many of the most important memory safe languages have larger dependency chains, dealing with larger chains is a major issue for the adoption of memory safe languages.
+
+If memory safe programs are to gain more widespread adoption, particularly as components of operating systems, we will need to address both the logistical and web-of-trust challenges presented by longer dependency chains. This could involve trying to shorten chains and/or gaining confidence in how we manage longer chains.
