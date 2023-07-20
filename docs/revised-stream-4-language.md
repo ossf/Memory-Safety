@@ -71,3 +71,13 @@ TO DO - need examples.
 ### Invest in Education
 
 TO DO
+
+### Challenges
+
+#### Dependency Chains
+
+Many memory safe languages (e.g. Rust, Go, Python) have relatively advanced package management models, including more advanced dependency management tools. This leads to dependency chains that are typically significantly larger than those of equivalent C programs.
+
+Longer dependency chains are not necessarily specific to memory safe languages. However, since many of the most important memory safe languages have larger dependency chains, dealing with larger chains is a major issue for the adoption of memory safe languages.
+
+If memory safe programs are to gain more widespread adoption, particularly as components of operating systems, we will need to address both the logistical and web-of-trust challenges presented by longer dependency chains. This could involve trying to shorten chains and/or gaining confidence in how we manage longer chains.
