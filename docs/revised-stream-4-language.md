@@ -8,7 +8,6 @@ In this doc we have standardized on this terminology/spelling:
 * NOT memory-safely
 * NOT unsafety
 
-
 ## The Problem
 
 It is common for vulnerabilities to result from a program mismanaging memory. These types of vulnerabilities are called memory safety vulnerabilities.
