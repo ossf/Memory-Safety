@@ -3,6 +3,7 @@
 This is a draft of revised language for Stream 4 - Memory Safety of the [Open Source Software Security Mobilization Plan](https://openssf.org/oss-security-mobilization-plan/).
 
 In this doc we have standardized on this terminology/spelling:
+
 * memory safety
 * memory-safe
 * NOT memory-safely
