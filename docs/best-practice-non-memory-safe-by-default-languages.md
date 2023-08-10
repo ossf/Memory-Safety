@@ -2,9 +2,11 @@
 
 This working group recommends switching to a memory-safe by default language whenever possible or practical. However, when switching to a memory-safe by default language is not possible or practical, there are developer practices that will improve memory safety, even if it is not the default.
 
-# C
+## C
+
 * [Scope-based resource management for the kernel](https://lwn.net/Articles/934679/)
 
 ## C++
+
 * [Making C++ Memory-Safe Without Borrow Checking, Reference Counting, or Tracing Garbage Collection](https://verdagon.dev/blog/vale-memory-safe-cpp)
 * [C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines)
