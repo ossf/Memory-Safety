@@ -42,7 +42,8 @@ A project can submit its support request through the SIG repository issues (TODO
 
 **Case Studies and Use Cases:** Look for real-world use cases or case studies where the project has been successfully implemented.
 
-**Contributor Activity:** Check the activity of project contributors. Are there multiple active contributors, or is the project mostly maintained by one person or organization? 
+**Contributor Activity:** Check the activity of project contributors. Are there multiple active contributors, or is the project mostly maintained by one person or organization?
 
-**Ecosystem:** Consider the broader ecosystem around the project. Are there complementary tools and libraries that enhance its functionality? 
-Lifespan: Projects with a longer history of development and usage may be more stable and reliable.
+**Ecosystem:** Consider the broader ecosystem around the project. Are there complementary tools and libraries that enhance its functionality?
+
+**Lifespan:** Projects with a longer history of development and usage may be more stable and reliable.
