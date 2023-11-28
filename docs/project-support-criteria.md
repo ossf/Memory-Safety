@@ -11,6 +11,7 @@ This Working Group is focused specifically on how to technically evaluate a proj
 Does this project meaningfully improve memory safety within Open Source software [according to our definition of memory safety](https://github.com/ossf/Memory-Safety/blob/main/docs/definitions.md)?
 
 Meaningful efforts include (but are not limited to):
+
 * Targeted re-write efforts of Open Source software in memory safe by default languages
 * Educational efforts on memory safety in software
 * Tools/Processes which improve the memory safety of software when a rewrite in a memory safe by default language is not possible/practical
