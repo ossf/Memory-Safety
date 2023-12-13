@@ -15,4 +15,4 @@ Meaningful efforts include (but are not limited to):
 * Targeted re-write efforts of Open Source software in memory safe by default languages
 * Educational efforts on memory safety in software
 * Tools/Processes which improve the memory safety of software when a rewrite in a memory safe by default language is not possible/practical
-* Efforts which reduce undefined behavior in commonly used Open Source software components
+* Efforts which reduce undefined behavior (related to memory safety) in commonly used Open Source software components
