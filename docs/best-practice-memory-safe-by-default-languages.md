@@ -1,6 +1,6 @@
 # Best Practices - Memory-Safe By Default Languages
 
-While Memory-Safe by default languages are, by definition, memory safe by default, there are ways that the can be used unsafely (or less safely). Here are best developer practices for using these languages.
+While Memory-Safe by default languages are, by definition, memory-safe by default, there are ways that they can be used unsafely (or less safely). Here are best developer practices for using these languages.
 
 ## Python
 
@@ -21,6 +21,10 @@ TO DO
 ## .NET
 
 TO DO
+
+## JavaScript
+
+* Follow the [Memory management guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_management)
 
 ## Java
 

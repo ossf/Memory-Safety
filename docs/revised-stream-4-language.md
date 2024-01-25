@@ -13,7 +13,7 @@ In this doc we have standardized on this terminology/spelling:
 
 It is common for vulnerabilities to result from a program mismanaging memory. These types of vulnerabilities are called memory safety vulnerabilities.
 
-Some programming languages, including Rust, Go, and Java, are commonly referred to as "memory-safe languages". By default, these languages prevent programmers from making the mistakes that result in classes of memory safety vulnerabilities. Other languages, including C and C++, are commonly referred to as "memory unsafe languages". Be default, these languages do not prevent programmers from making the mistakes that result in classes of memory safety vulnerabilities.
+Some programming languages, including Rust, Go, JavaScript, and Java, are commonly referred to as "memory-safe languages". By default, these languages prevent programmers from making the mistakes that result in classes of memory safety vulnerabilities. Other languages, including C and C++, are commonly referred to as "memory unsafe languages". Be default, these languages do not prevent programmers from making the mistakes that result in classes of memory safety vulnerabilities.
 
 Microsoft estimates that 70% of the vulnerabilities in its products (those that were built with memory unsafe languages) over the past decade are memory safety vulnerabilities[^1]. Google estimates that 90% of vulnerabilities in Android media and Bluetooth components are memory safety vulnerabilities[^2].
 
