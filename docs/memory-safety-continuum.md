@@ -29,7 +29,7 @@ Using raw C or C++ (or old versions of C and C++ language and compiler)
 
 Examples:
 
-* [Using attributes such as `cleanup` and classes when writing C](https://lwn.net/Articles/934679/) (and depending on developers to manually check this) 
+* [Using attributes such as `cleanup` and classes when writing C](https://lwn.net/Articles/934679/) (and depending on developers to manually check this)
 * Following the [C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines) when writing C++
 * Using the [C++ Compiler Hardening Guide](https://github.com/ossf/wg-best-practices-os-developers/tree/main/docs/Compiler-Hardening-Guides) when compiling C++ code
 
