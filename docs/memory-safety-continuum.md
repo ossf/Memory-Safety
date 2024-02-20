@@ -6,6 +6,10 @@ When discussing memory safety, it's easy to fall into the idea of a memory safet
 
 This DRAFT document lays out the idea of the "Memory Safety Continuum". Eventually, this idea may be used as a foundation for other content which will help developers and organizations identify where they are on the continuum and how to get to where they want to be.
 
+## Audience
+
+The audience for this draft is developers - however, the audience may expand with future drafts/versions of this document.
+
 ## What is Memory Safety?
 
 Rather than using terms like "Memory Safe Language" and "Memory Unsafe Language", this SIG prefers the terms "memory safe by default" and "non-memory safe by default". Please see our [useful definitions](definitions.md) file for more information about memory safety and undefined behavior.
@@ -16,10 +20,12 @@ This is a very rough idea of what the continuum might look like - from "least sa
 
 * Using a non-memory safe by default language (such as C or C++) without any developer best practices or automated tooling to check for memory safety
 * Using a non-memory safe by default language with developer best practices, but no automated tooling to check for memory safety
-* Using a non-memory safe by default language with developer best practices and automated tooling to check for memory safety
+* Using a non-memory safe by default language with developer best practices and automated tooling to check for memory safety in first party code
+* Using a non-memory safe by default language with developer best practices and automated tooling to check for memory safety in first party code AND automated tooling to check for memory safety in third party code (dependencies)
 * Using a memory safe by default language (such as Rust, Go, Python, Java, JavaScript, C#) without developer best practices and automated tooling
-* Using a memory safe by default language with developer best practices
-* Using a memory safe by default language with developer best practices and automated tooling
+* Using a memory safe by default language with developer best practices, but no automated tooling to check for memory safety
+* Using a memory safe by default language with developer best practices and automated tooling to check for memory safety in first party code
+* Using a memory safe by default language with developer best practices and automated tooling to check for memory safety in first party code AND automated tooling to check for memory safety in third party code (dependencies)
 
 ### Using a non-memory safe by default language without an developer best practies or automated tooling
 
@@ -33,7 +39,11 @@ Examples:
 * Following the [C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines) when writing C++
 * Using the [C++ Compiler Hardening Guide](https://github.com/ossf/wg-best-practices-os-developers/tree/main/docs/Compiler-Hardening-Guides) when compiling C++ code
 
-### Using a non-memory safe by default language with developer best practices and automated tooling
+### Using a non-memory safe by default language with developer best practices and automated tooling to check for memory safety in first party code
+
+TO DO
+
+### Using a non-memory safe by default language with developer best practices and automated tooling to check for memory safety in first party code AND automated tooling to check for memory safety in third party code (dependencies)
 
 TO DO
 
@@ -52,12 +62,16 @@ Examples:
 * Following best practices (LINK NEEDED) when using the Go [unsafe](https://pkg.go.dev/unsafe#pkg-overview) package
 * Following [Javascript Memory Management](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_management) practices
 
-### Using a memory safe by default language with developer best practices and automated tooling
+### Using a memory safe by default language with developer best practices and automated tooling to check for memory safety in first party code
 
 Examples:
 
 * Using the [Go Data Race Detector](https://go.dev/doc/articles/race_detector)
 * Using other tools such as [govulncheck, fuzzing, and vet](https://go.dev/doc/security/best-practices) when writing Go code
+
+### Using a memory safe by default language with developer best practices and automated tooling to check for memory safety in first party code AND third party code
+
+TO DO
 
 ## FAQ
 
