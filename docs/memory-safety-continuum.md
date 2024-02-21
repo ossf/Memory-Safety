@@ -18,7 +18,7 @@ Rather than using terms like "Memory Safe Language" and "Memory Unsafe Language"
 
 This is a very rough idea of what the continuum might look like - from "least safety" to "most safety"
 
-* Using a non-memory safe by default language (such as C or C++) without any developer best practices or automated tooling to check for memory safety
+* Using a non-memory safe by default language (such as C or C++) without developer best practices or automated tooling to check for memory safety
 * Using a non-memory safe by default language with developer best practices, but no automated tooling to check for memory safety
 * Using a non-memory safe by default language with developer best practices and automated tooling to check for memory safety in first party code
 * Using a non-memory safe by default language with developer best practices and automated tooling to check for memory safety in first party code AND automated tooling to check for memory safety in third party code (dependencies)
@@ -27,7 +27,7 @@ This is a very rough idea of what the continuum might look like - from "least sa
 * Using a memory safe by default language with developer best practices and automated tooling to check for memory safety in first party code
 * Using a memory safe by default language with developer best practices and automated tooling to check for memory safety in first party code AND automated tooling to check for memory safety in third party code (dependencies)
 
-### Using a non-memory safe by default language without an developer best practies or automated tooling
+### Using a non-memory safe by default language without developer best practies or automated tooling
 
 Using raw C or C++ (or old versions of C and C++ language and compiler)
 
