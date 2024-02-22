@@ -20,6 +20,7 @@ A memory safe by default language prevents (by default) common memory safety vul
 
 * Null pointer deference
 * Wild pointers
+* Uninitialized variables being used
 
 **Memory leak (memory usage is not tracked or is tracked incorrectly)**
 
