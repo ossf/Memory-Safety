@@ -14,7 +14,7 @@ The audience for this draft is developers - however, the audience may expand wit
 
 Rather than using terms like "Memory Safe Language" and "Memory Unsafe Language", this SIG prefers the terms "memory safe by default" and "non-memory safe by default". Please see our [useful definitions](definitions.md) file for more information about memory safety and undefined behavior.
 
-## The Continuum
+## The Continuum - Understanding Where Your Software Is Now
 
 This is a very rough idea of what the continuum might look like - from "least safety" to "most safety"
 
@@ -38,6 +38,7 @@ Examples:
 * [Using attributes such as `cleanup` and classes when writing C](https://lwn.net/Articles/934679/) (and depending on developers to manually check this)
 * Following the [C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines) when writing C++
 * Using the [C++ Compiler Hardening Guide](https://github.com/ossf/wg-best-practices-os-developers/tree/main/docs/Compiler-Hardening-Guides) when compiling C++ code
+* Isolating code that processes un-trusted data from code that performs direct memory management operations or uses raw pointers (see [Language-theoretic Security](https://github.com/ossf/Memory-Safety/pull/20))
 
 ### Using a non-memory safe by default language with developer best practices and automated tooling to check for memory safety in first party code
 
@@ -71,6 +72,11 @@ Examples:
 * Using other tools such as [govulncheck, fuzzing, and vet](https://go.dev/doc/security/best-practices) when writing Go code
 
 ### Using a memory safe by default language with developer best practices and automated tooling to check for memory safety in first party code AND third party code
+
+* Using a fuzzer such as [AFL++](https://github.com/AFLplusplus/AFLplusplus) on both your own code and third party code
+* TO DO - add more
+
+## The Continuum - Getting to a Better State with re: to memory safety
 
 TO DO
 
