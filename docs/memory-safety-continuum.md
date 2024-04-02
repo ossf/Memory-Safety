@@ -90,7 +90,7 @@ This is not to say that using a memory safe by default language will protect you
 
 It is also possible that your software written in a memory safe by default language will need to interface with software written in a non-memory safe by default language (for example, Rust code which must interface with a C++ driver).
 
-No matter where your software is on this memory safety continuum, you will still need to exercise some level of personal/professional judgement on what is an acceptable amount of risk and what is not. 
+No matter where your software is on this memory safety continuum, you will still need to exercise some level of personal/professional judgement on what is an acceptable amount of risk and what is not.
 
 ### Are you saying we should just re-write billions of lines of C and C++ code in Rust?
 
