@@ -47,6 +47,9 @@ Examples:
 * Use a fuzzer such as [syzkaller](https://github.com/google/syzkaller)
 * Use [sanitizers](https://github.com/google/sanitizers)
 * Use tools to [detect dangling pointers](https://chromium.googlesource.com/chromium/src/+/HEAD/docs/dangling_ptr.md)
+* If using Visual Studio, use the [C/C++ code analysis tool](https://learn.microsoft.com/en-us/cpp/code-quality/code-analysis-for-c-cpp-overview?view=msvc-170)
+* If using Visual Studio, use the [C++ Core Guidelines checkers](https://learn.microsoft.com/en-us/cpp/code-quality/using-the-cpp-core-guidelines-checkers?view=msvc-170)
+* Use [CodeQL](https://codeql.github.com/) for the [languages that CodeQL supports](https://codeql.github.com/docs/codeql-overview/supported-languages-and-frameworks/)
 
 ### Using a non-memory safe by default language with developer best practices and automated tooling to check for memory safety in first party code AND automated tooling to check for memory safety in third party code (dependencies)
 
@@ -76,6 +79,7 @@ Examples:
 * Using the [Go Data Race Detector](https://go.dev/doc/articles/race_detector)
 * Using other tools such as [govulncheck, fuzzing, and vet](https://go.dev/doc/security/best-practices) when writing Go code
 * Using a mutation tester such as [cargo-mutants](https://github.com/sourcefrog/cargo-mutants)
+* Using [CodeQL](https://codeql.github.com/) for the [languages that CodeQL supports](https://codeql.github.com/docs/codeql-overview/supported-languages-and-frameworks/)
 
 ### Using a memory safe by default language with developer best practices and automated tooling to check for memory safety in first party code AND third party code
 
