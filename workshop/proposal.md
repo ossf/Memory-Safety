@@ -15,8 +15,8 @@ The focus is not on merely informing or educating participants, instead the inte
 
 Participation Levels:
 
-  - **Active Participants:** Informed individuals who's participation requires the submission of position papers.
-  - **Passive Participants:** The event will be streamed on YouTube for broader engagement.
+- **Active Participants:** Informed individuals who's participation requires the submission of position papers.
+- **Passive Participants:** The event will be streamed on YouTube for broader engagement.
 
 ### Position Papers
 
@@ -27,7 +27,7 @@ Participation Levels:
 ### Program Committee
 
 A diverse group of members who's responsibility is to review submitted position papers, develop the workshop agenda and leverage their existing network in the industry to encourage active participant's submission to the workshop.
-The committee meets fortnightly for calls during the planning phase of the workshop with collaboration on a Google Doc or GitHub repository. 
+The committee meets fortnightly for calls during the planning phase of the workshop with collaboration on a Google Doc or GitHub repository.
 Private discussions will be held as needed, but most activities will remain transparent.
 It is crucial to involve at least one more member organization, alongside committee members from various organizations, to ensure diversity and comprehensive coverage of the problem space.
 
@@ -49,9 +49,9 @@ The expected artefact of the workshop are papers, videos, and a final report tha
 ## Execution Plan
 
 1. **Call for Papers:** Announce the workshop and invite paper submissions.
-1. **Paper Review:** Program committee reviews submissions and finalizes the agenda.
-1. **Promotion:** Conduct a promotional session at OSS NA to attract more participants.
-1. **Virtual Sessions:** Hold the workshop over three consecutive days, with each session lasting two hours.
-1. **Documentation:** Take minutes during sessions and breakouts, ensuring all discussions are captured.
-1. **Artifacts Creation:** Compile the outputs into papers, videos, and a final report.
-1. **Follow-Up:** Share the artifacts with the broader community and consider feedback for future improvements.
+2. **Paper Review:** Program committee reviews submissions and finalizes the agenda.
+3. **Promotion:** Conduct a promotional session at OSS NA to attract more participants.
+4. **Virtual Sessions:** Hold the workshop over three consecutive days, with each session lasting two hours.
+5. **Documentation:** Take minutes during sessions and breakouts, ensuring all discussions are captured.
+6. **Artifacts Creation:** Compile the outputs into papers, videos, and a final report.
+7. **Follow-Up:** Share the artifacts with the broader community and consider feedback for future improvements.
