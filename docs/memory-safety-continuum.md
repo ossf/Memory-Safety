@@ -50,6 +50,8 @@ Examples:
 * If using Visual Studio, using the [C/C++ code analysis tool](https://learn.microsoft.com/en-us/cpp/code-quality/code-analysis-for-c-cpp-overview?view=msvc-170)
 * If using Visual Studio, using the [C++ Core Guidelines checkers](https://learn.microsoft.com/en-us/cpp/code-quality/using-the-cpp-core-guidelines-checkers?view=msvc-170)
 * Using [CodeQL](https://codeql.github.com/) for the [languages that CodeQL supports](https://codeql.github.com/docs/codeql-overview/supported-languages-and-frameworks/)
+* Using [BinSkim](https://github.com/microsoft/binskim) to analyze binaries
+* Using [DevSkim](https://github.com/microsoft/devskim) IDE extensions/language analyzers
 
 ### Using a non-memory safe by default language with developer best practices and automated tooling to check for memory safety in first party code AND automated tooling to check for memory safety in third party code (dependencies)
 
@@ -80,7 +82,7 @@ Examples:
 * Using other tools such as [govulncheck, fuzzing, and vet](https://go.dev/doc/security/best-practices) when writing Go code
 * Using a mutation tester such as [cargo-mutants](https://github.com/sourcefrog/cargo-mutants)
 * Using [CodeQL](https://codeql.github.com/) for the [languages that CodeQL supports](https://codeql.github.com/docs/codeql-overview/supported-languages-and-frameworks/)
-* Using [BinSkim] to analyze binaries
+* Using [DevSkim](https://github.com/microsoft/devskim) IDE extensions/language analyzers
 
 ### Using a memory safe by default language with developer best practices and automated tooling to check for memory safety in first party code AND third party code
 
