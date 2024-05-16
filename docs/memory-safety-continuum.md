@@ -39,10 +39,19 @@ Examples:
 * Following the [C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines) when writing C++
 * Using the [C++ Compiler Hardening Guide](https://github.com/ossf/wg-best-practices-os-developers/tree/main/docs/Compiler-Hardening-Guides) when compiling C++ code
 * Isolating code that processes un-trusted data from code that performs direct memory management operations or uses raw pointers (see [Language-theoretic Security](https://github.com/ossf/Memory-Safety/pull/20))
+* Using [smart pointers](https://learn.microsoft.com/en-us/cpp/cpp/smart-pointers-modern-cpp?view=msvc-170)
 
 ### Using a non-memory safe by default language with developer best practices and automated tooling to check for memory safety in first party code
 
-TO DO
+* [Using compiler options for hardening C and C++ Code](https://best.openssf.org/Compiler-Hardening-Guides/Compiler-Options-Hardening-Guide-for-C-and-C++.html)
+* Using a fuzzer such as [syzkaller](https://github.com/google/syzkaller)
+* Using [sanitizers](https://github.com/google/sanitizers)
+* Using tools to [detect dangling pointers](https://chromium.googlesource.com/chromium/src/+/HEAD/docs/dangling_ptr.md)
+* If using Visual Studio, using the [C/C++ code analysis tool](https://learn.microsoft.com/en-us/cpp/code-quality/code-analysis-for-c-cpp-overview?view=msvc-170)
+* If using Visual Studio, using the [C++ Core Guidelines checkers](https://learn.microsoft.com/en-us/cpp/code-quality/using-the-cpp-core-guidelines-checkers?view=msvc-170)
+* Using [CodeQL](https://codeql.github.com/) for the [languages that CodeQL supports](https://codeql.github.com/docs/codeql-overview/supported-languages-and-frameworks/)
+* Using [BinSkim](https://github.com/microsoft/binskim) to analyze binaries
+* Using [DevSkim](https://github.com/microsoft/devskim) IDE extensions/language analyzers
 
 ### Using a non-memory safe by default language with developer best practices and automated tooling to check for memory safety in first party code AND automated tooling to check for memory safety in third party code (dependencies)
 
@@ -63,6 +72,7 @@ Examples:
 * Following the [Rustnomicon](https://doc.rust-lang.org/nomicon/intro.html) careful practices when using unsafe blocks in Rust
 * Following best practices (LINK NEEDED) when using the Go [unsafe](https://pkg.go.dev/unsafe#pkg-overview) package
 * Following [Javascript Memory Management](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_management) practices
+* Ensuring [soundness](https://rust-lang.github.io/unsafe-code-guidelines/glossary.html#soundness-of-code--of-a-library) of unsafe Rust code
 
 ### Using a memory safe by default language with developer best practices and automated tooling to check for memory safety in first party code
 
@@ -70,6 +80,9 @@ Examples:
 
 * Using the [Go Data Race Detector](https://go.dev/doc/articles/race_detector)
 * Using other tools such as [govulncheck, fuzzing, and vet](https://go.dev/doc/security/best-practices) when writing Go code
+* Using a mutation tester such as [cargo-mutants](https://github.com/sourcefrog/cargo-mutants)
+* Using [CodeQL](https://codeql.github.com/) for the [languages that CodeQL supports](https://codeql.github.com/docs/codeql-overview/supported-languages-and-frameworks/)
+* Using [DevSkim](https://github.com/microsoft/devskim) IDE extensions/language analyzers
 
 ### Using a memory safe by default language with developer best practices and automated tooling to check for memory safety in first party code AND third party code
 
