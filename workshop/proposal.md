@@ -36,6 +36,7 @@ It is crucial to involve at least one more member organization, alongside commit
 ### Timeline
 
 - **Duration:** The workshop will span over more than six months from planning to execution.
+- **When:** Planned for November 24
 - **Format:**
   - **Virtual:** Recommended to conduct the workshop virtually.
   - **Session Timing:** 3 days with 2-hour sessions each day, accommodating PST and EMEA time zones. Consecutive days are preferred to maintain momentum.
@@ -50,7 +51,7 @@ The expected artefact of the workshop are papers, videos, and a final report tha
 
 1. **Call for Papers:** Announce the workshop and invite paper submissions.
 2. **Paper Review:** Program committee reviews submissions and finalizes the agenda.
-3. **Promotion:** Conduct a promotional session at OSS NA to attract more participants.
+3. **Promotion:** Conduct a promotional session at different conferences to attract more participants.
 4. **Virtual Sessions:** Hold the workshop over three consecutive days, with each session lasting two hours.
 5. **Documentation:** Take minutes during sessions and breakouts, ensuring all discussions are captured.
 6. **Artifacts Creation:** Compile the outputs into papers, videos, and a final report.
