@@ -12,7 +12,6 @@ A memory safe by default language prevents (by default) common memory safety vul
 
 * Buffer overflow
 * Buffer over-read
-* Race condition -  concurrent read/writes to shared memory
 * Invalid page fault
 * Use after free
 
@@ -30,6 +29,20 @@ A memory safe by default language prevents (by default) common memory safety vul
 * Invalid free
 * Mismatched free
 * Unwanted aliasing
+
+## Race Conditions
+
+Some lists may also include race conditions (concurrent reads/writes
+to shared memory) as being part of memory safety (e.g., for access
+control).
+
+The Rust programming language prevents many kinds of
+memory-based race conditions by default, because it ensures there
+is at most one writer *or* one or more readers. Many other programming
+languages, such as Java, do *not* automatically prevent memory-based
+race conditions, yet are still generally considered "memory safe"
+languages. Therefore, countering race conditions is generally *not*
+considered necessary for a language to be considered memory safe.
 
 ## Undefined Behavior
 
