@@ -53,13 +53,15 @@ The [CHARTER.md](CHARTER.md) outlines the scope and governance of our group acti
 
 ### SIG Collaborators
 
-* [Walter Pearce](https://github.com/walterpearce)
-* [Randall T. Vasquez, Gentoo/Homebrew](https://github.com/ran-dall)
 * [Jay White, Microsoft](https://github.com/camaleon2016)
-* [Christine Abernathy, F5](https://github.com/caabernathy)
 * [Gabriel Dos Reis (Microsoft)](https://github.com/GabrielDosReis)
+* [Charles Palmer (IBM)](https://github.com/ccpalmer)
+* [David Edelsohn (IBM)](https://github.com/edelsohn)
+* [Walter Pearce](https://github.com/walterpearce)
 * [Josh Aas (he/him, ISRG/Prossimo)](https://github.com/bdaehlie)
 * [Jonathan Leitschuh (he/him) OpenSSF](https://github.com/JLLeitschuh)
+* [Christine Abernathy, F5](https://github.com/caabernathy)
+* [Randall T. Vasquez, Gentoo/Homebrew](https://github.com/ran-dall)
 
 ## **Intellectual Property**
 
