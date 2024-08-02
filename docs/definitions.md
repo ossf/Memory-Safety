@@ -36,7 +36,7 @@ A memory safe by default language also addresses the following:
 
 * Concurrent read/writes to shared memory
 
-Some memory safe by default languages prevent data races (such as Rust), but others (such as Java and Go) require the use of additional conventions, packages, or libraries to prevent data races. Please see [Best Practices for Memory Safe by Default Languages](best-practice-memory-safe-by-default-languages.md)
+Some memory safe by default languages prevent data races (such as Rust), but others (such as Java, Go, and C#) require the use of additional conventions, packages, or libraries to prevent data races. Please see [Best Practices for Memory Safe by Default Languages](best-practice-memory-safe-by-default-languages.md)
 
 ## Undefined Behavior
 
