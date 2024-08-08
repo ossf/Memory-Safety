@@ -16,7 +16,7 @@ Rather than using terms like "Memory Safe Language" and "Memory Unsafe Language"
 
 ## The Continuum - Understanding Where Your Software Is Now
 
-The continuum we proose, from "least safety" to "most safety", is a way to understand where your software is now in terms of memory safety and what you can do to improve it. The ambition of developers and organizations should be to follow **current** best practice for the eco system that they are in, and to use the modern tool chains for that eco system towards a more memory safe state.
+The continuum we propose, from "least safety" to "most safety", is a way to understand where your software is now in terms of memory safety and what you can do to improve it. The ambition of developers and organizations should be to follow **current** best practice for the eco system that they are in, and to use the modern tool chains for that eco system towards a more memory safe state.
 
 * Using a non-memory safe by default language (such as C or C++) without developer best practices or automated tooling to check for memory safety
 * Using a non-memory safe by default language with developer best practices, but no automated tooling to check for memory safety
