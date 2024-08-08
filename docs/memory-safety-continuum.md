@@ -22,7 +22,7 @@ This continuum, from "least safe" to "most safe", is intended to help you define
 * Using a non-memory safe by default language with developer best practices, but no automated tooling to check for memory safety
 * Using a non-memory safe by default language with developer best practices and automated tooling to check for memory safety in your software's code
 * Using a non-memory safe by default language with developer best practices and automated tooling to check for memory safety in your software's code as well as in all your software's dependencies code
-* Using a memory safe by default language (such as Rust, Go, Python, Java, JavaScript, C#) without developer best practices and compiler-activated plugin, post processors etc. and without additional automated tooling that checks for memory safety 
+* Using a memory safe by default language (such as Rust, Go, Python, Java, JavaScript, C#) without developer best practices and compiler-activated plugin, post processors etc. and without additional automated tooling that checks for memory safety.
 * Using a memory safe by default language with developer best practices and compiler-activated plugin, post processors etc. but no additional automated tooling to check for memory safety
 * Using a memory safe by default language with developer best practices, compiler-activated plugin, post processors etc. and additional automated tooling to check for memory safety in your software's code
 * Using a memory safe by default language with developer best practices, compiler-activated plugin, post processors etc. and additional automated tooling to check for memory safety in your software's code as well as in all your software's dependencies code
