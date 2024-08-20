@@ -20,7 +20,7 @@ TO DO
 
 ## .NET
 
-TO DO
+* Use unsafe blocks sparingly and [follow guidance](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/unsafe-code)
 
 ## JavaScript
 
