@@ -29,14 +29,12 @@ This continuum, from "most safe" to "least safe", is intended to help you define
 
 ### Examples
 
-### Using a memory safe by default language with developer best practices and automated tooling to check for memory safety in your code as well as in all dependencies' code
+#### Using a memory safe by default language with developer best practices and automated tooling to check for memory safety in your code as well as in all dependencies' code
 
 - Using a fuzzer such as [AFL++](https://github.com/AFLplusplus/AFLplusplus) on both your own code and third party code
 - TO DO - add more examples
 
-### Using a memory safe by default language with developer best practices, language processors, post processors etc. and automated tooling to check for memory safety in your code
-
-Examples:
+#### Using a memory safe by default language with developer best practices, language processors, post processors etc. and automated tooling to check for memory safety in your code
 
 - Using the [Go Data Race Detector](https://go.dev/doc/articles/race_detector)
 - Using other tools such as [govulncheck, fuzzing, and vet](https://go.dev/doc/security/best-practices) when writing Go code
@@ -44,29 +42,25 @@ Examples:
 - Using [CodeQL](https://codeql.github.com/) for the [languages that CodeQL supports](https://codeql.github.com/docs/codeql-overview/supported-languages-and-frameworks/)
 - Using [DevSkim](https://github.com/microsoft/devskim) IDE extensions/language analyzers
 
-### Using a memory safe by default language with developer best practices and language processors, post processors etc., but no automated tooling
-
-Examples:
+#### Using a memory safe by default language with developer best practices and language processors, post processors etc., but no automated tooling
 
 - Following the [Rustnomicon](https://doc.rust-lang.org/nomicon/intro.html) careful practices when using unsafe blocks in Rust
 - Following best practices (LINK NEEDED) when using the Go [unsafe](https://pkg.go.dev/unsafe#pkg-overview) package
 - Following [Javascript Memory Management](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_management) practices
 - Ensuring [soundness](https://rust-lang.github.io/unsafe-code-guidelines/glossary.html#soundness-of-code--of-a-library) of unsafe Rust code
 
-### Using a memory safe by default language without developer best practices
-
-Examples:
+#### Using a memory safe by default language without developer best practices
 
 - Using unsafe blocks in Rust [without assessing the entire module in which the unsafe code appears](https://github.com/ossf/Memory-Safety/issues/15#issuecomment-1847939439)
 - Using the [no_mangle](https://github.com/rust-lang/rust/issues/28179) attribute in Rust
 - Using compiler options which turn off some or all of the compiler's memory safety checks
 - Disabling .NET's source code [Analyzers](https://learn.microsoft.com/en-gb/dotnet/fundamentals/code-analysis/overview?tabs=net-8) during build
 
-### Using a non-memory safe by default language with developer best practices and automated tooling to check for memory safety in your code as well as in all your dependencies' code
+#### Using a non-memory safe by default language with developer best practices and automated tooling to check for memory safety in your code as well as in all your dependencies' code
 
 TO DO
 
-### Using a non-memory safe by default language with developer best practices and automated tooling to check for memory safety in your code
+#### Using a non-memory safe by default language with developer best practices and automated tooling to check for memory safety in your code
 
 - [Using compiler options for hardening C and C++ Code](https://best.openssf.org/Compiler-Hardening-Guides/Compiler-Options-Hardening-Guide-for-C-and-C++.html)
 - Using a fuzzer such as [syzkaller](https://github.com/google/syzkaller)
@@ -78,9 +72,7 @@ TO DO
 - Using [BinSkim](https://github.com/microsoft/binskim) to analyze binaries
 - Using [DevSkim](https://github.com/microsoft/devskim) IDE extensions/language analyzers
 
-### Using a non-memory safe by default language with developer best practices, but no automated tooling
-
-Examples:
+#### Using a non-memory safe by default language with developer best practices, but no automated tooling
 
 - [Using attributes such as `cleanup` and classes when writing C](https://lwn.net/Articles/934679/) (and depending on developers to manually check this)
 - Following the [C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines) when writing C++
@@ -88,7 +80,7 @@ Examples:
 - Isolating code that processes un-trusted data from code that performs direct memory management operations or uses raw pointers (see [Language-theoretic Security](https://github.com/ossf/Memory-Safety/pull/20))
 - Using [smart pointers](https://learn.microsoft.com/en-us/cpp/cpp/smart-pointers-modern-cpp?view=msvc-170)
 
-### Using a non-memory safe by default language without developer best practies or automated tooling
+#### Using a non-memory safe by default language without developer best practies or automated tooling
 
 Using raw C or C++ (or old versions of C and C++ language and compiler)
 
