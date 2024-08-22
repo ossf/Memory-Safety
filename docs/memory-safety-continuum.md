@@ -18,8 +18,6 @@ Rather than using terms like "Memory Safe Language" and "Memory Unsafe Language"
 
 This continuum, from "most safe" to "least safe", is intended to help you define and understand the memory safety of your software and what you can do to improve it. We propose that developers and organizations should use modern toolchains and follow current best practices for their software ecosystems. In particular, whenever, there is a memory safe feature or workflow, it should be adopted over a non-memory safe variant.
 
-### Memory safe by default language (such as Rust, Go, Python, Java, JavaScript, C#)
-
 - Using a memory safe by default language (such as Rust, Go, Python, Java, JavaScript, C#), following the language's best practices that include using language processors and additional automated tooling to check for memory safety in your code as well as in all your dependencies' code ([examples](#using-a-memory-safe-by-default-language-with-developer-best-practices-and-automated-tooling-to-check-for-memory-safety-in-your-code-as-well-as-in-all-dependencies-code))
 - Using a memory safe by default language, following the language's best practices that include using language processors and additional automated tooling to check for memory safety in your code only ([examples](#using-a-memory-safe-by-default-language-with-developer-best-practices-language-processors-post-processors-etc-and-automated-tooling-to-check-for-memory-safety-in-your-code))
 - Using a memory safe by default language, following the language's best practices that include using language processors without any additional tooling ([examples](#using-a-memory-safe-by-default-language-with-developer-best-practices-and-language-processors-post-processors-etc-but-no-automated-tooling))
