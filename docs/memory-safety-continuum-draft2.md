@@ -68,7 +68,7 @@ TO DO
 
 ### Is there a way to be COMPLETELY memory safe?
 
-In theory, yes. In reality...it's very hard. It is theoretically possible to write C++ code in a way that is free from memory safety bugs. In practice, however, we still see a very large number of memory safety related security vulnerabilities every year - known vulnerabilities that could be prevented if the code were written in a memory safe by default language (as noted by Microsoft[^1], Google[^2], and the US National Security Agency[^3]).
+In theory, yes. In reality...it's very hard. It is theoretically possible to write C++ code in a way that is free from memory safety bugs. In practice, however, we still see a very large number of memory safety related security vulnerabilities every year - known vulnerabilities that could be prevented if the code were written in a memory safe by default language (as noted by Microsoft[^2], Google[^3], and the US National Security Agency[^4]).
 
 This is not to say that using a memory safe by default language will protect you from all vulnerabilities. Saying something is "default" also implies that there are ways of using the language in a non default way. This is also true of your software's dependencies - for example, your Rust code may be free of unsafe blocks (or, at least, use them sparingly), but an Open Source package you depend on may not be. Evaluating the safety of your software includes evaluating anything your software depends on.
 
