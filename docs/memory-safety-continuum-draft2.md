@@ -30,7 +30,7 @@ There are several ways to enhance the safety of your and your dependencies' code
 
 We have captured these enhancements in these substages of this section of the continuum, ordered from most to least ideal.
 
-* 1.1: Using developer best practices and automated tooling to verify safety in both your and your dependencies' code 
+* 1.1: Using developer best practices and automated tooling to verify safety in both your and your dependencies' code
 * 1.2: Using developer best practices and automated tooling to verify safety *only* in your code
 * 1.3: Using developer best practices *only*
 
@@ -38,7 +38,7 @@ We have captured these enhancements in these substages of this section of the co
 
 ### 2. Using Memory Safe by Default Languages to interface with Non-Memory Safe By Default Languages
 
-While new software is increasingly being written in memory safe by default languages, there are billions of existing lines of code written in non-memory safe by default languages. Targeted rewrites of highly used, highly vulnerable software components may be necessary and beneficial to the safety of the Open Source ecosystem, but we do not advocate for mass rewrites of all existing code written in non-memory safe by default languages. 
+While new software is increasingly being written in memory safe by default languages, there are billions of existing lines of code written in non-memory safe by default languages. Targeted rewrites of highly used, highly vulnerable software components may be necessary and beneficial to the safety of the Open Source ecosystem, but we do not advocate for mass rewrites of all existing code written in non-memory safe by default languages.
 
 It is and will continue to be necessary for software written in memory safe by default languages to interact with software written in non-memory safe by default languages through foreign function interfaces (FFI). FFI is one of the primary uses for unsafe blocks within Rust (as well as within other languages).
 
@@ -48,7 +48,7 @@ It is and will continue to be necessary for software written in memory safe by d
 
 While we do advocate for writing new code in memory safe by default languages, we recognize this is not always possible or practical. Existing software must be maintained and often expanded, regardless of what language it is written in.
 
-There are several ways to enhance the safety of your and your dependencies' code when written in a non-memory safe by default language. Non-coincidentally - these are very similar to the practices for software written in memory safe by default languages. While there are advantages and disadvantages to various language ecosystems, the principals of solid software engineering remain consistent. 
+There are several ways to enhance the safety of your and your dependencies' code when written in a non-memory safe by default language. Non-coincidentally - these are very similar to the practices for software written in memory safe by default languages. While there are advantages and disadvantages to various language ecosystems, the principals of solid software engineering remain consistent.
 
 * Using the language ecosystem's best practices ([Examples](#non-memory-safe-by-default-language-ecosystem-best-practices))
 * Using automated tooling to provide additional safety checks to your code ([Examples](#non-memory-safe-by-default-language-automated-tooling-to-provide-additional-checks-to-your-code))
@@ -56,7 +56,7 @@ There are several ways to enhance the safety of your and your dependencies' code
 
 We have captured these enhancements in these substages of this section of the continuum, ordered from most to least ideal.
 
-* 1.1: Using developer best practices and automated tooling to verify safety in both your and your dependencies' code 
+* 1.1: Using developer best practices and automated tooling to verify safety in both your and your dependencies' code
 * 1.2: Using developer best practices and automated tooling to verify safety *only* in your code
 * 1.3: Using developer best practices *only*
 
@@ -76,9 +76,9 @@ It is also possible that your software written in a memory safe by default langu
 
 No matter where your software is on this memory safety continuum, you will still need to exercise some level of personal/professional judgement on what is an acceptable amount of risk and what is not.
 
-[^1]: [A proactive approach to more secure code](https://msrc.microsoft.com/blog/2019/07/a-proactive-approach-to-more-secure-code/)
-[^2]: [The More You Know, The More You Don't Know](https://googleprojectzero.blogspot.com/2022/04/the-more-you-know-more-you-know-you.html)
-[^3]: [Software Memory Safety](https://media.defense.gov/2022/Nov/10/2003112742/-1/-1/0/CSI_SOFTWARE_MEMORY_SAFETY.PDF)
+[^2]: [A proactive approach to more secure code](https://msrc.microsoft.com/blog/2019/07/a-proactive-approach-to-more-secure-code/)
+[^3]: [The More You Know, The More You Don't Know](https://googleprojectzero.blogspot.com/2022/04/the-more-you-know-more-you-know-you.html)
+[^4]: [Software Memory Safety](https://media.defense.gov/2022/Nov/10/2003112742/-1/-1/0/CSI_SOFTWARE_MEMORY_SAFETY.PDF)
 
 ### Are you saying we should just re-write billions of lines of C and C++ code in Rust?
 
