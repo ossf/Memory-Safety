@@ -86,7 +86,7 @@ No.
 
 This is not a real world possibility. Even if it were, it would not be practical nor would it be truly helpful.
 
-There are times a rewrite of a particular section of software (such as one where vulnerabilities are particularly prevalent) may be necessary. However, this our focus is not on rewriting the world in Rust (or any other language). Instead, it is on helping developers (and others) understand the memory safety of their code now and how to improve it in meaningful and achievable ways.
+There are times a rewrite of a particular section of software (such as one where vulnerabilities are particularly prevalent) may be necessary. However, our focus is not on rewriting the world in Rust (or any other language). Instead, it is on helping developers (and others) understand the memory safety of their code now and how to improve it in meaningful and achievable ways.
 
 ### Why do you rank using automated tooling higher than just using developer best practices?
 
