@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Over the past few years, much of the conversation around memory safety in software has treated the concept as if it were a binary. Your software is either memory safe or it is not. The truth, as is often the case, is more complex. In an ideal world, we would all write our software in memory safe by default languages, never needing to use an unsafe block or to interface with software written in a non-memory safe by default language. We do not live in that world, however, and are unlikely to live in that world in any of our lifetimes. Rather than a binary, memory safety in software should be considered a continuum. We may never be at the ideal, but we can strive to improve with every line of code we write - whether it is net new code, changes to code we are responsible for maintaining or (when appropriate) a targeted rewrite of existing code.
+Much of the conversation around software memory safety has treated the concept as if it were a binary where software is either memory safe or it is not. The truth, as is often the case, is more complex. In an ideal world, we would all write our software in memory safe by default languages, never needing to use an unsafe block or to interface with software written in a non-memory safe by default language. We do not live in that world, however, and are unlikely to live in that world any time soon. Memory safety in software should be considered a continuum, rather than a binary. Within a continuum, even if we are never at the ideal, we can strive to improve with every line of code we write - whether it is net new code, changes to code we are responsible for maintaining or (when appropriate) targeted rewrites of existing code.
 
 In the document, we present the idea of the memory safety continuum - defining various stages and helping you understand where on the continuum the software you write falls today. It is important to understand that different stages may apply to different areas of the same code base. Even if you write the majority of your software in a language like Rust, you will likely still need to interface with existing code written in C or C++, and these interfaces will require different practices for memory safety than other areas of your code base. The primary audience for this document is developers who want to write safer code. It will also likely provide value to engineering managers, product managers, project managers, and anyone else who wants to better understand memory safety in software.
 
@@ -10,14 +10,59 @@ In the document, we present the idea of the memory safety continuum - defining v
 
 The OpenSSF Memory Safety SIG was created with the mission of understanding and reducing memory safety vulnerabilities in Open Source Software. One of our first tasks was to define memory safety for the purposes of our group's work. We considered definitions from various sources and, ultimately, came to a consensus on [this definition](https://github.com/ossf/Memory-Safety/blob/main/docs/definitions.md). While Wikipedia may not traditionally be considered a good source to cite, the crowd editors of [the Memory safety entry](https://en.wikipedia.org/wiki/Memory_safety) have produced a comprehensive classification list of memory safety errors. Memory safety errors are the class of error that memory safe by default languages seek to eliminate.
 
-We also came to a consensus on using the terms "memory safe by default" for languages such as Rust, Go, and C# and "non-memory safe by default" for languages such as C and C++. We feel this better reflects the complexity of achieving memory safety in software that must interact with other software.
+We also came to a consensus on using the terms "memory safe by default" for languages such as Rust, Go, and C# and "non-memory safe by default" for languages such as C and C++. We feel this better reflects the complexity of achieving memory safety in software that must interact with other software (which is nearly all software).
 
 ## The Continuum
 
-### Using Memory Safe By Default Languages
+This continuum, ordered from "most safe" to "least safe", is intended to help you define and understand the memory safety of your software and what you can do to improve it. We propose that developers and organizations should use modern toolchains and follow current best practices for their software ecosystems. In particular, whenever, there is a memory safe feature or workflow, it should be adopted over a non-memory safe variant.
+
+### 1. Writing software in Memory Safe By Default Languages
+
+Whenever possible/practical, you should use a memory safe by default language (such as Rust, Go, Python, Java, JavaScript, C#) when writing new software. Having memory safety incorporated directly into the language forces good safety practices at compile time as the code is being written. Developers get real time feedback as they create and compile their code. It is certainly possible and sometimes necessary to bypass some of the compiler's safety checks through the use of unsafe blocks and functions. However, memory safe by default languages force developers to intentionally choose unsafety (and, even when the do, to only use unsafety in contained and limited areas of the code), while non-memory safe by default languages depend on developers to intentionally (and continually) choose safety. If it is possible to escape into unsafe blocks, it is natural to ask whether developers will default to using them, even when using a memory safe by default language. In 2022, as Google scaled up its use of Rust within the Android Open Source Project, they noted "In general, use of unsafe in Android’s Rust appears to be working as intended. It’s used rarely, and when it is used, it’s encapsulating behavior that’s easier to reason about and review for safety" [^1].
+
+Even with memory safe by default languages, it is still vital to follow that language ecosystems best practices and to use external tools to ensure safety not only within your code, but also within dependencies that your code pulls in. Nearly all Open Source software (and likely most close source software as well) depends on external libraries and packages to function. Care also needs to be exercised to check your dependencies for vulnerabilities for vulnerabilities.
+
+There are several ways to enhance the safety of your and your dependencies' code. These include:
+* Using the language ecosystem's best practices ([Examples](#memory-safe-by-default-language-ecosystem-best-practices))
+* Using automated tooling to provide additional safety checks to your code ([Examples](#memory-safe-by-default-language-automated-tooling-to-provide-additional-checks-to-your-code))
+* Using automated tooling to provide safety checks to your code's dependencies ([Examples](#memory-safe-by-default-language-automated-tooling-to-provide-additional-checks-to-your-dependencies))
+
+We have captured these enhancements in these substages of this section of the continuum, ordered from most to least ideal.
+
+* 1.1: Using developer best practices and automated tooling to verify safety in both your and your dependencies' code 
+* 1.2: Using developer best practices and automated tooling to verify safety *only* in your code
+* 1.3: Using developer best practices *only*
+
+[^1]: [Memory Safe Languages in Android 13](https://security.googleblog.com/2022/12/memory-safe-languages-in-android-13.html)
 
 ### Using Memory Safe by Default Languages to interface with Non-Memory Safe By Default Languages
 
 ### Using Non-Memory Safe By Default Languages
 
 ## Conclusion
+
+## FAQs
+
+## Examples
+
+### 1. Writing software in Memory Safe By Default Languages
+
+#### Memory safe by default language ecosystem best practices
+
+* Following the [Rustnomicon](https://doc.rust-lang.org/nomicon/intro.html) careful practices when using unsafe blocks in Rust
+* Following best practices (LINK NEEDED) when using the Go [unsafe](https://pkg.go.dev/unsafe#pkg-overview) package
+* Following [Javascript Memory Management](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_management) practices
+* Ensuring [soundness](https://rust-lang.github.io/unsafe-code-guidelines/glossary.html#soundness-of-code--of-a-library) of unsafe Rust code
+* [More best practices](https://github.com/ossf/Memory-Safety/blob/main/docs/best-practice-memory-safe-by-default-languages.md)
+
+#### Memory safe by default language automated tooling to provide additional checks to your code
+
+* Using the [Go Data Race Detector](https://go.dev/doc/articles/race_detector)
+* Using other tools such as [govulncheck, fuzzing, and vet](https://go.dev/doc/security/best-practices) when writing Go code
+* Using a mutation tester such as [cargo-mutants](https://github.com/sourcefrog/cargo-mutants)
+* Using [CodeQL](https://codeql.github.com/) for the [languages that CodeQL supports](https://codeql.github.com/docs/codeql-overview/supported-languages-and-frameworks/)
+* Using [DevSkim](https://github.com/microsoft/devskim) IDE extensions/language analyzers
+
+#### Memory safe by default language automated tooling to provide additional checks to your dependencies
+
+* Using a fuzzer such as [AFL++](https://github.com/AFLplusplus/AFLplusplus) on both your own code and third party code
