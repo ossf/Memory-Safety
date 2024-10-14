@@ -10,11 +10,11 @@ In the document, we present the idea of the memory safety continuum - defining v
 
 The OpenSSF Memory Safety SIG was created with the mission of understanding and reducing memory safety vulnerabilities in Open Source Software. One of our first tasks was to define memory safety for the purposes of our group's work. We considered definitions from various sources and, ultimately, came to a consensus on [this definition](https://github.com/ossf/Memory-Safety/blob/main/docs/definitions.md). While Wikipedia may not traditionally be considered a good source to cite, the crowd editors of [the Memory safety entry](https://en.wikipedia.org/wiki/Memory_safety) have produced a comprehensive classification list of memory safety errors. Memory safety errors are the class of error that memory safe by default languages seek to eliminate.
 
-We also came to a consensus on using the terms "memory safe by default" for languages such as Rust, Go, and C# and "non-memory safe by default" for languages such as C and C++. We feel this better reflects the complexity of achieving memory safety in software that must interact with other software (which is nearly all software).
+We also came to a consensus on using the terms "memory safe by default" for languages such as Rust, Go, and C# and "non-memory safe by default" for languages such as C and C++.
 
 ## The Continuum
 
-This continuum, ordered from "most safe" to "least safe", is intended to help you define and understand the memory safety of your software and what you can do to improve it. We propose that developers and organizations should use modern toolchains and follow current best practices for their software ecosystems. In particular, whenever, there is a memory safe feature or workflow, it should be adopted over a non-memory safe variant.
+This continuum, ordered from "most safe" to "least safe", is intended to help you define and understand the memory safety of your software and what you can do to improve it. We propose that developers and organizations should use modern toolchains and follow current best practices for their software ecosystems. In particular, whenever there is a memory safe feature or workflow, it should be adopted over a non-memory safe variant.
 
 ### 1. Writing software in Memory Safe By Default Languages
 
@@ -23,6 +23,7 @@ Whenever possible/practical, you should use a memory safe by default language (s
 Even with memory safe by default languages, it is still vital to follow that language ecosystems best practices and to use external tools to ensure safety not only within your code, but also within dependencies that your code pulls in. Nearly all Open Source software (and likely most close source software as well) depends on external libraries and packages to function. Care also needs to be exercised to check your dependencies for vulnerabilities for vulnerabilities.
 
 There are several ways to enhance the safety of your and your dependencies' code. These include:
+
 * Using the language ecosystem's best practices ([Examples](#memory-safe-by-default-language-ecosystem-best-practices))
 * Using automated tooling to provide additional safety checks to your code ([Examples](#memory-safe-by-default-language-automated-tooling-to-provide-additional-checks-to-your-code))
 * Using automated tooling to provide safety checks to your code's dependencies ([Examples](#memory-safe-by-default-language-automated-tooling-to-provide-additional-checks-to-your-dependencies))
@@ -35,11 +36,33 @@ We have captured these enhancements in these substages of this section of the co
 
 [^1]: [Memory Safe Languages in Android 13](https://security.googleblog.com/2022/12/memory-safe-languages-in-android-13.html)
 
-### Using Memory Safe by Default Languages to interface with Non-Memory Safe By Default Languages
+### 2. Using Memory Safe by Default Languages to interface with Non-Memory Safe By Default Languages
 
-### Using Non-Memory Safe By Default Languages
+While new software is increasingly being written in memory safe by default languages, there are billions of existing lines of code written in non-memory safe by default languages. Targeted rewrites of highly used, highly vulnerable software components may be necessary and beneficial to the safety of the Open Source ecosystem, but we do not advocate for mass rewrites of all existing code written in non-memory safe by default languages. 
+
+It is and will continue to be necessary for software written in memory safe by default languages to interact with software written in non-memory safe by default languages through foreign function interfaces (FFI). FFI is one of the primary uses for unsafe blocks within Rust (as well as within other languages).
+
+[TO DO: Expand on this and collect best practices]
+
+### 3. Using Non-Memory Safe By Default Languages
+
+While we do advocate for writing new code in memory safe by default languages, we recognize this is not always possible or practical. Existing software must be maintained and often expanded, regardless of what language it is written in.
+
+There are several ways to enhance the safety of your and your dependencies' code when written in a non-memory safe by default language. Non-coincidentally - these are very similar to the practices for software written in memory safe by default languages. While there are advantages and disadvantages to various language ecosystems, the principals of solid software engineering remain consistent. 
+
+* Using the language ecosystem's best practices ([Examples](#non-memory-safe-by-default-language-ecosystem-best-practices))
+* Using automated tooling to provide additional safety checks to your code ([Examples](#non-memory-safe-by-default-language-automated-tooling-to-provide-additional-checks-to-your-code))
+* Using automated tooling to provide safety checks to your code's dependencies ([Examples](#non-memory-safe-by-default-language-automated-tooling-to-provide-additional-checks-to-your-dependencies))
+
+We have captured these enhancements in these substages of this section of the continuum, ordered from most to least ideal.
+
+* 1.1: Using developer best practices and automated tooling to verify safety in both your and your dependencies' code 
+* 1.2: Using developer best practices and automated tooling to verify safety *only* in your code
+* 1.3: Using developer best practices *only*
 
 ## Conclusion
+
+TO DO
 
 ## FAQs
 
@@ -66,3 +89,33 @@ We have captured these enhancements in these substages of this section of the co
 #### Memory safe by default language automated tooling to provide additional checks to your dependencies
 
 * Using a fuzzer such as [AFL++](https://github.com/AFLplusplus/AFLplusplus) on both your own code and third party code
+
+### 2. Using Memory Safe by Default Languages to interface with Non-Memory Safe By Default Languages
+
+TO DO
+
+### 3. Using Non-Memory Safe By Default Languages
+
+#### Non-memory safe by default language ecosystem best practices
+
+* [Using attributes such as `cleanup` and classes when writing C](https://lwn.net/Articles/934679/) (and depending on developers to manually check this)
+* Following the [C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines) when writing C++
+* Using the [C++ Compiler Hardening Guide](https://github.com/ossf/wg-best-practices-os-developers/tree/main/docs/Compiler-Hardening-Guides) when compiling C++ code
+* Isolating code that processes un-trusted data from code that performs direct memory management operations or uses raw pointers (see [Language-theoretic Security](https://github.com/ossf/Memory-Safety/pull/20))
+* Using [smart pointers](https://learn.microsoft.com/en-us/cpp/cpp/smart-pointers-modern-cpp?view=msvc-170)
+
+#### Non-memory safe by default language automated tooling to provide additional checks to your code
+
+* [Using compiler options for hardening C and C++ Code](https://best.openssf.org/Compiler-Hardening-Guides/Compiler-Options-Hardening-Guide-for-C-and-C++.html)
+* Using a fuzzer such as [syzkaller](https://github.com/google/syzkaller)
+* Using [sanitizers](https://github.com/google/sanitizers)
+* Using tools to [detect dangling pointers](https://chromium.googlesource.com/chromium/src/+/HEAD/docs/dangling_ptr.md)
+* If using Visual Studio, using the [C/C++ code analysis tool](https://learn.microsoft.com/en-us/cpp/code-quality/code-analysis-for-c-cpp-overview?view=msvc-170)
+* If using Visual Studio, using the [C++ Core Guidelines checkers](https://learn.microsoft.com/en-us/cpp/code-quality/using-the-cpp-core-guidelines-checkers?view=msvc-170)
+* Using [CodeQL](https://codeql.github.com/) for the [languages that CodeQL supports](https://codeql.github.com/docs/codeql-overview/supported-languages-and-frameworks/)
+* Using [BinSkim](https://github.com/microsoft/binskim) to analyze binaries
+* Using [DevSkim](https://github.com/microsoft/devskim) IDE extensions/language analyzers
+
+#### Non-memory safe by default language automated tooling to provide additional checks to your dependencies
+
+TO DO
