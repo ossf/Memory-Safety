@@ -8,7 +8,7 @@ In the document, we present the idea of the memory safety continuum - defining v
 
 ### Definitions
 
-The OpenSSF Memory Safety SIG was created with the mission of understanding and reducing memory safety vulnerabilities in Open Source Software. One of our first tasks was to define memory safety for the purposes of our group's work. We considered definitions from various sources and, ultimately, came to a consensus on [this definition](https://github.com/ossf/Memory-Safety/blob/main/docs/definitions.md). While Wikipedia may not traditionally be considered a good source to cite, the crowd editors of [the Memory safety entry](https://en.wikipedia.org/wiki/Memory_safety) have produced a comprehensive classification list of memory safety errors. Memory safety errors are the class of error that memory safe by default languages seek to eliminate.
+The OpenSSF Memory Safety SIG was created with the mission of understanding and reducing memory safety vulnerabilities in Open Source Software. One of our first tasks was to define memory safety for the purpose of our group's work. We considered definitions from various sources and, ultimately, came to a consensus on [this definition](https://github.com/ossf/Memory-Safety/blob/main/docs/definitions.md). While Wikipedia may not traditionally be considered a good source to cite, the crowd editors of [the Memory safety entry](https://en.wikipedia.org/wiki/Memory_safety) have produced a comprehensive classification list of memory safety errors. Memory safety errors are the class of error that memory safe by default languages seek to eliminate.
 
 We also came to a consensus on using the terms "memory safe by default" for languages such as Rust, Go, and C# and "non-memory safe by default" for languages such as C and C++.
 
@@ -18,9 +18,9 @@ This continuum, ordered from "most safe" to "least safe", is intended to help yo
 
 ### 1. Writing software in Memory Safe By Default Languages
 
-Whenever possible/practical, you should use a memory safe by default language (such as Rust, Go, Python, Java, JavaScript, C#) when writing new software. Having memory safety incorporated directly into the language forces good safety practices at compile time as the code is being written. Developers get real time feedback as they create and compile their code. It is certainly possible and sometimes necessary to bypass some of the compiler's safety checks through the use of unsafe blocks and functions. However, memory safe by default languages force developers to intentionally choose unsafety (and, even when the do, to only use unsafety in contained and limited areas of the code), while non-memory safe by default languages depend on developers to intentionally (and continually) choose safety. If it is possible to escape into unsafe blocks, it is natural to ask whether developers will default to using them, even when using a memory safe by default language. In 2022, as Google scaled up its use of Rust within the Android Open Source Project, they noted "In general, use of unsafe in Android’s Rust appears to be working as intended. It’s used rarely, and when it is used, it’s encapsulating behavior that’s easier to reason about and review for safety" [^1].
+Whenever possible/practical, you should use a memory safe by default language (such as Rust, Go, Python, Java, JavaScript, C#) when writing new software. Having memory safety incorporated directly into the language forces good safety practices at compile time as the code is being written. Developers get real time feedback as they create and compile their code. It is certainly possible and sometimes necessary to bypass some of the compiler's safety checks through the use of unsafe blocks and functions. However, memory safe by default languages force developers to intentionally choose unsafety (and, even when the do, to only use unsafety in contained and limited areas of the code), while non-memory safe by default languages depend on developers to intentionally (and continually) choose safety. If it is possible to escape into unsafe blocks, it is natural to ask whether developers will default to using them, negating the advantage of using a memory safe by default language. In 2022, as Google scaled up its use of Rust within the Android Open Source Project, they noted "In general, use of unsafe in Android’s Rust appears to be working as intended. It’s used rarely, and when it is used, it’s encapsulating behavior that’s easier to reason about and review for safety" [^1].
 
-Even with memory safe by default languages, it is still vital to follow that language ecosystems best practices and to use external tools to ensure safety not only within your code, but also within dependencies that your code pulls in. Nearly all Open Source software (and likely most close source software as well) depends on external libraries and packages to function. Care also needs to be exercised to check your dependencies for vulnerabilities for vulnerabilities.
+Even when a language is memory safe by default, it is still vital to follow that language ecosystem's best practices and to use external tools to ensure safety not only within your code, but also within dependencies that your code pulls in. Nearly all Open Source software (and likely most close source software) depends on external libraries and packages to function. Care also needs to be exercised to check your dependencies for vulnerabilities.
 
 There are several ways to enhance the safety of your and your dependencies' code. These include:
 
@@ -48,7 +48,7 @@ It is and will continue to be necessary for software written in memory safe by d
 
 While we do advocate for writing new code in memory safe by default languages, we recognize this is not always possible or practical. Existing software must be maintained and often expanded, regardless of what language it is written in.
 
-There are several ways to enhance the safety of your and your dependencies' code when written in a non-memory safe by default language. Non-coincidentally - these are very similar to the practices for software written in memory safe by default languages. While there are advantages and disadvantages to various language ecosystems, the principals of solid software engineering remain consistent.
+There are several ways to enhance the safety of your and your dependencies' code when written in a non-memory safe by default language. These principles ended up being the same as with memory safe by default languages, though applied a little differently. While there are advantages and disadvantages to various language ecosystems, the principles of solid software engineering remain consistent.
 
 * Using the language ecosystem's best practices ([Examples](#non-memory-safe-by-default-language-ecosystem-best-practices))
 * Using automated tooling to provide additional safety checks to your code ([Examples](#non-memory-safe-by-default-language-automated-tooling-to-provide-additional-checks-to-your-code))
@@ -56,9 +56,9 @@ There are several ways to enhance the safety of your and your dependencies' code
 
 We have captured these enhancements in these substages of this section of the continuum, ordered from most to least ideal.
 
-* 1.1: Using developer best practices and automated tooling to verify safety in both your and your dependencies' code
-* 1.2: Using developer best practices and automated tooling to verify safety *only* in your code
-* 1.3: Using developer best practices *only*
+* 3.1: Using developer best practices and automated tooling to verify safety in both your and your dependencies' code
+* 3.2: Using developer best practices and automated tooling to verify safety *only* in your code
+* 3.3: Using developer best practices *only*
 
 ## Conclusion
 
