@@ -66,6 +66,32 @@ TO DO
 
 ## FAQs
 
+### Is there a way to be COMPLETELY memory safe?
+
+In theory, yes. In reality...it's very hard. It is theoretically possible to write C++ code in a way that is free from memory safety bugs. In practice, however, we still see a very large number of memory safety related security vulnerabilities every year - known vulnerabilities that could be prevented if the code were written in a memory safe by default language (as noted by Microsoft[^1], Google[^2], and the US National Security Agency[^3]).
+
+This is not to say that using a memory safe by default language will protect you from all vulnerabilities. Saying something is "default" also implies that there are ways of using the language in a non default way. This is also true of your software's dependencies - for example, your Rust code may be free of unsafe blocks (or, at least, use them sparingly), but an Open Source package you depend on may not be. Evaluating the safety of your software includes evaluating anything your software depends on.
+
+It is also possible that your software written in a memory safe by default language will need to interface with software written in a non-memory safe by default language (for example, Rust code which must interface with a C++ driver).
+
+No matter where your software is on this memory safety continuum, you will still need to exercise some level of personal/professional judgement on what is an acceptable amount of risk and what is not.
+
+[^1]: [A proactive approach to more secure code](https://msrc.microsoft.com/blog/2019/07/a-proactive-approach-to-more-secure-code/)
+[^2]: [The More You Know, The More You Don't Know](https://googleprojectzero.blogspot.com/2022/04/the-more-you-know-more-you-know-you.html)
+[^3]: [Software Memory Safety](https://media.defense.gov/2022/Nov/10/2003112742/-1/-1/0/CSI_SOFTWARE_MEMORY_SAFETY.PDF)
+
+### Are you saying we should just re-write billions of lines of C and C++ code in Rust?
+
+No.
+
+This is not a real world possibility. Even if it were, it would not be practical nor would it be truly helpful.
+
+There are times a rewrite of a particular section of software (such as one where vulnerabilities are particularly prevalent) may be necessary. However, this our focus is not on rewriting the world in Rust (or any other language). Instead, it is on helping developers (and others) understand the memory safety of their code now and how to improve it in meaningful and achievable ways.
+
+### Why do you rank using automated tooling higher than just using developer best practices?
+
+The amount software that has already been produced is staggering - and it is only growing every day. Expecting every developer to manually check their code (and the code their code interacts with) is no longer practical or possible. Automated tooling must be used to catch (at the least) known, common vulnerabilities that a developer may unintentionally introduce in their code.
+
 ## Examples
 
 ### 1. Writing software in Memory Safe By Default Languages
