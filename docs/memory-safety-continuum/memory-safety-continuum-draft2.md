@@ -22,17 +22,11 @@ Whenever possible/practical, you should use a memory safe by default language (s
 
 Even when a language is memory safe by default, it is still vital to follow that language ecosystem's best practices and to use external tools to ensure safety not only within your code, but also within dependencies that your code pulls in. Nearly all Open Source software (and likely most close source software) depends on external libraries and packages to function. Care also needs to be exercised to check your dependencies for vulnerabilities.
 
-There are several ways to enhance the safety of your and your dependencies' code. These include:
+There are several ways to enhance the safety of your and your dependencies' code. We have captured these enhancements in these substages of this section of the continuum, ordered from most to least ideal.
 
-* Using the language ecosystem's best practices ([Examples](#memory-safe-by-default-language-ecosystem-best-practices))
-* Using automated tooling to provide additional safety checks to your code ([Examples](#memory-safe-by-default-language-automated-tooling-to-provide-additional-checks-to-your-code))
-* Using automated tooling to provide safety checks to your code's dependencies ([Examples](#memory-safe-by-default-language-automated-tooling-to-provide-additional-checks-to-your-dependencies))
-
-We have captured these enhancements in these substages of this section of the continuum, ordered from most to least ideal.
-
-* 1.1: Using developer best practices and automated tooling to verify safety in both your and your dependencies' code
-* 1.2: Using developer best practices and automated tooling to verify safety *only* in your code
-* 1.3: Using developer best practices *only*
+* 1.1: Using developer best practices and automated tooling to verify safety in both your and your dependencies' code ([Examples](#memory-safe-by-default-language-automated-tooling-to-provide-additional-checks-to-your-dependencies))
+* 1.2: Using developer best practices and automated tooling to verify safety *only* in your code ([Examples](#memory-safe-by-default-language-automated-tooling-to-provide-additional-checks-to-your-code))
+* 1.3: Using developer best practices *only* ([Examples](#memory-safe-by-default-language-ecosystem-best-practices))
 
 [^1]: [Memory Safe Languages in Android 13](https://security.googleblog.com/2022/12/memory-safe-languages-in-android-13.html)
 
@@ -48,17 +42,11 @@ It is and will continue to be necessary for software written in memory safe by d
 
 While we do advocate for writing new code in memory safe by default languages, we recognize this is not always possible or practical. Existing software must be maintained and often expanded, regardless of what language it is written in.
 
-There are several ways to enhance the safety of your and your dependencies' code when written in a non-memory safe by default language. These principles ended up being the same as with memory safe by default languages, though applied a little differently. While there are advantages and disadvantages to various language ecosystems, the principles of solid software engineering remain consistent.
+There are several ways to enhance the safety of your and your dependencies' code when written in a non-memory safe by default language. These principles ended up being the same as with memory safe by default languages, though applied a little differently. While there are advantages and disadvantages to various language ecosystems, the principles of solid software engineering remain consistent. We have captured these enhancements in these substages of this section of the continuum, ordered from most to least ideal.
 
-* Using the language ecosystem's best practices ([Examples](#non-memory-safe-by-default-language-ecosystem-best-practices))
-* Using automated tooling to provide additional safety checks to your code ([Examples](#non-memory-safe-by-default-language-automated-tooling-to-provide-additional-checks-to-your-code))
-* Using automated tooling to provide safety checks to your code's dependencies ([Examples](#non-memory-safe-by-default-language-automated-tooling-to-provide-additional-checks-to-your-dependencies))
-
-We have captured these enhancements in these substages of this section of the continuum, ordered from most to least ideal.
-
-* 3.1: Using developer best practices and automated tooling to verify safety in both your and your dependencies' code
-* 3.2: Using developer best practices and automated tooling to verify safety *only* in your code
-* 3.3: Using developer best practices *only*
+* 3.1: Using developer best practices and automated tooling to verify safety in both your and your dependencies' code ([Examples](#non-memory-safe-by-default-language-automated-tooling-to-provide-additional-checks-to-your-dependencies))
+* 3.2: Using developer best practices and automated tooling to verify safety *only* in your code ([Examples](#non-memory-safe-by-default-language-automated-tooling-to-provide-additional-checks-to-your-code))
+* 3.3: Using developer best practices *only* ([Examples](#non-memory-safe-by-default-language-ecosystem-best-practices))
 
 ## Conclusion
 
