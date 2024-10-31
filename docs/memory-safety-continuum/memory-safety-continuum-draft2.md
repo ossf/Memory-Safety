@@ -6,7 +6,7 @@ Much of the conversation around software memory safety has treated the concept a
 
 In the document, we present the idea of the memory safety continuum - defining various stages and helping you understand where on the continuum the software you write falls today. It is important to understand that different stages may apply to different areas of the same code base. Even if you write the majority of your software in a language like Rust, you will likely still need to interface with existing code written in C or C++, and these interfaces will require different practices for memory safety than other areas of your code base. The primary audience for this document is developers who want to write safer code. It will also likely provide value to engineering managers, product managers, project managers, and anyone else who wants to better understand memory safety in software.
 
-Become more memory safe is a iterative process, no matter where you start on the continuum. This is especially true when dealing with large existing codebases. Small steps, such as introducing memory safe abstractions over non-memory safe code, can make a big difference over time.
+Becoming more memory safe is a iterative process, no matter where you start on the continuum. This is especially true when dealing with large existing codebases. Small steps, such as introducing memory safe abstractions over non-memory safe code, can make a big difference over time.
 
 ### Definitions
 
