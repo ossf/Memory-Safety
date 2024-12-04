@@ -37,7 +37,7 @@ Develop pragmatic guidance, standards, and software (including tools, tool impro
 ## **Meeting times**
 
 * Every other Thursday @ 13:00am EST. The invite is available on the [OpenSSF Community Calendar](https://calendar.google.com/calendar/u/0/r?cid=czYzdm9lZmhwNWk5cGZsdGI1cTY3bmdwZXNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ).
-* [Meeting Minutes](https://docs.google.com/document/d/1Ehpp1UmAIqMs0ZdKr15sd5MS48OeaGKB9H40htVehs4)
+* [Meeting Minutes](https://docs.google.com/document/d/1RnIzqeKyrOJvs6vQ8xGH6TjZDoEFaGUs1NkAx--v_3Y/edit?tab=t.0)
 
 ## **Governance**
 
