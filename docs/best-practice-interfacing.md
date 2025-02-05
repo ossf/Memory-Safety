@@ -10,7 +10,7 @@ It is and will continue to be necessary for software written in memory safe by d
 
 ## Python
 
-## Rust 
+## Rust
 
 * Follow [Foreign Function Interface guidance in The Rustnomicon](https://doc.rust-lang.org/nomicon/ffi.html)
 * Use the [bindgen](https://crates.io/crates/bindgen) crate
