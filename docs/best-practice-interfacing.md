@@ -2,15 +2,19 @@ While new software is increasingly being written in memory safe by default langu
 
 It is and will continue to be necessary for software written in memory safe by default languages to interact with software written in non-memory safe by default languages through foreign function interfaces (FFI). FFI is one of the primary uses for unsafe blocks within Rust (as well as within other languages).
 
+## General
+
+* separate all FFIs into a separate crate/module/package so that it can be audited in isolation. All exported symbols from that crate/module/package should be memory safe. [Source](https://github.com/ossf/Memory-Safety/issues/36#issuecomment-2477083785)
+
 ## Python
 
 ## Rust 
 
-* Following [Foreign Function Interface guidance in The Rustnomicon](https://doc.rust-lang.org/nomicon/ffi.html)
+* Follow [Foreign Function Interface guidance in The Rustnomicon](https://doc.rust-lang.org/nomicon/ffi.html)
 * Use the [bindgen](https://crates.io/crates/bindgen) crate
 * Use the [cbindgen](https://crates.io/crates/cbindgen) crate
 * Use the [cxx](https://crates.io/crates/cbindgen) crate
-* Monitor the Rust Foundation's [Rust/C++ inerop initiative](https://github.com/rustfoundation/interop-initiative)
+* Monitor the Rust Foundation's [Rust/C++ intterop initiative](https://github.com/rustfoundation/interop-initiative)
 
 ## Go
 
