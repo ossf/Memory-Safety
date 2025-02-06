@@ -16,7 +16,7 @@ It is and will continue to be necessary for software written in memory safe by d
 * Use the [bindgen](https://crates.io/crates/bindgen) crate
 * Use the [cbindgen](https://crates.io/crates/cbindgen) crate
 * Use the [cxx](https://crates.io/crates/cbindgen) crate
-* Monitor the Rust Foundation's [Rust/C++ intterop initiative](https://github.com/rustfoundation/interop-initiative)
+* Monitor the Rust Foundation's [Rust/C++ interop initiative](https://github.com/rustfoundation/interop-initiative)
 
 ## Go
 
