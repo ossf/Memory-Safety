@@ -28,4 +28,7 @@ TO DO
 
 ## Java
 
-TO DO
+* Avoid using `sun.misc.Unsafe` or `jdk.internal.misc.Unsafe`. If needed, prefer the newer [Foreign Function & Memory (FFM) APIs](https://docs.oracle.com/en/java/javase/22/core/foreign-function-and-memory-api.html) (Java 22 or above) which implement boundary checks when accessing off-heap memory and errors results in exceptions (e.g. IndexOutOfBoundsException) instead of crashes (e.g. SIGSEGV).
+* If `sun.misc.Unsafe` or `jdk.internal.misc.Unsafe` is your only option, follow all the same best practices as you would with a [non memory-safe language](best-practice-non-memory-safe-by-default-languages.md).
+* Monitor occurrences of `sun.misc.Unsafe` or `jdk.internal.misc.Unsafe` in your code (or prevent them) using for example [checkstyle's IllegalImport rule](https://checkstyle.org/checks/imports/illegalimport.html) configured to detect both `sun.*` and `jdk.internal.*`.
+* If FFM APIs are used, enable the compilation option `-Xlint:restricted` to detect risky usages at compile time (the option enables warnings in the `[restricted]` log category). Similar warnings are produced by default by the JVM at runtime. These warnings should be monitored and investigated as well since they could come from third-party libraries and not just from own code.
