@@ -1,6 +1,6 @@
 # Announcing the Release of "The Memory Safety Continuum"
 
-The OpenSSF's Memory Safety SIG has just released ["The Memory Safety Continuum"](). It was written with you, the developers, organizations, and security professionals in mind and it provides practical insights and strategies for enhancing your software security whereever you are on the memory safety spectrum today.
+The OpenSSF's Memory Safety SIG has just released ["The Memory Safety Continuum"](TBD). It was written with you, the developers, organizations, and security professionals in mind and it provides practical insights and strategies for enhancing your software security whereever you are on the memory safety spectrum today.
 
 ## Why Memory Safety Matters
 
