@@ -131,7 +131,6 @@ The amount software that has already been produced is staggering - and it is onl
 * Using the [-verbose:jni JVM option](https://docs.oracle.com/javase/8/docs/technotes/guides/troubleshoot/clopts002.html#CHDCHGEE) can also be useful to detect or troubleshoot JNI issues but beware of the potential performance as it could cause a lot of extra log messages if JNI is heavily used in your application.
 * [More best practices](https://github.com/ossf/Memory-Safety/blob/main/docs/best-practice-interfacing.md)
 
-
 ### 3. Using Non-Memory Safe By Default Languages
 
 #### Non-memory safe by default language ecosystem best practices
