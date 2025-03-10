@@ -38,7 +38,12 @@ While new software is increasingly being written in memory safe by default langu
 
 It is and will continue to be necessary for software written in memory safe by default languages to interact with software written in non-memory safe by default languages through foreign function interfaces (FFI). FFI is one of the primary uses for unsafe blocks within Rust (as well as within other languages).
 
-[TO DO: Expand on this and collect best practices]
+There are some general best practices for interfacing between memory safe by default and non-memory-safe by default languages, as well as language-ecoystem specific practices. We have captured these enhancements in the following substages.
+
+* 2.1: Using general and language ecosystem specific best practices for safely interfacing between memory safe by default and non-memory safe by default languages ([Examples](#language-specific-best-practices))
+* 2.2: Using general best practices for safely interfacing between memory safe by default and non-memory-safe by default languages ([Examples](#general-interfacing-best-practices))
+
+We expect further developments in this space and will update this continuum as they emerge.
 
 ### 3. Using Non-Memory Safe By Default Languages
 
@@ -101,6 +106,7 @@ The amount software that has already been produced is staggering - and it is onl
 * Using a mutation tester such as [cargo-mutants](https://github.com/sourcefrog/cargo-mutants)
 * Using [CodeQL](https://codeql.github.com/) for the [languages that CodeQL supports](https://codeql.github.com/docs/codeql-overview/supported-languages-and-frameworks/)
 * Using [DevSkim](https://github.com/microsoft/devskim) IDE extensions/language analyzers
+* [More best practices](https://github.com/ossf/Memory-Safety/blob/main/docs/best-practice-memory-safe-by-default-languages.md)
 
 #### Memory safe by default language automated tooling to provide additional checks to your dependencies
 
@@ -108,7 +114,23 @@ The amount software that has already been produced is staggering - and it is onl
 
 ### 2. Using Memory Safe by Default Languages to interface with Non-Memory Safe By Default Languages
 
-TO DO
+#### General interfacing best practices
+
+* Separating all FFIs into a separate crate/module/package so that it can be audited in isolation. All exported symbols from that crate/module/package should be memory safe. [Source](https://github.com/ossf/Memory-Safety/issues/36#issuecomment-2477083785)
+* [More best practices](https://github.com/ossf/Memory-Safety/blob/main/docs/best-practice-interfacing.md)
+
+#### Language specific best practices
+
+* Using the [bindgen](https://crates.io/crates/bindgen) crate
+* Using the [cbindgen](https://crates.io/crates/cbindgen) crate
+* Using the [cxx](https://crates.io/crates/cbindgen) crate
+* Avoiding using the legacy Java Native Interface (JNI) APIs. If needed, prefer the newer Foreign Function & Memory (FFM) APIs introduced in Java 22.
+* Monitoring or preventing JNI API occurrences (e.g. uses of the `native` keyword or calls to `System.load()` or `System.loadLibrary()`) in your code using [static code analysis tools](https://www.baeldung.com/tag/static-analysis).
+* If using JNI is your only option, following all the same best practices as you would with a [non memory-safe language](best-practice-non-memory-safe-by-default-languages.md).
+* Always enabling the [-Xcheck:jni JVM option](https://docs.oracle.com/javase/8/docs/technotes/guides/troubleshoot/clopts002.html#CHDHCBBG) to activate additional validation of JNI functions' arguments. Even if your code does not use JNI, your third-party dependencies might (JDBC drivers are a common example).
+* Using the [-verbose:jni JVM option](https://docs.oracle.com/javase/8/docs/technotes/guides/troubleshoot/clopts002.html#CHDCHGEE) can also be useful to detect or troubleshoot JNI issues but beware of the potential performance as it could cause a lot of extra log messages if JNI is heavily used in your application.
+* [More best practices](https://github.com/ossf/Memory-Safety/blob/main/docs/best-practice-interfacing.md)
+
 
 ### 3. Using Non-Memory Safe By Default Languages
 
@@ -119,6 +141,7 @@ TO DO
 * Using the [C++ Compiler Hardening Guide](https://github.com/ossf/wg-best-practices-os-developers/tree/main/docs/Compiler-Hardening-Guides) when compiling C++ code
 * Isolating code that processes un-trusted data from code that performs direct memory management operations or uses raw pointers (see [Language-theoretic Security](https://github.com/ossf/Memory-Safety/pull/20))
 * Using [smart pointers](https://learn.microsoft.com/en-us/cpp/cpp/smart-pointers-modern-cpp?view=msvc-170)
+* [More best practices](https://github.com/ossf/Memory-Safety/blob/main/docs/best-practice-non-memory-safe-by-default-languages.md)
 
 #### Non-memory safe by default language automated tooling to provide additional checks to your code
 
@@ -131,6 +154,7 @@ TO DO
 * Using [CodeQL](https://codeql.github.com/) for the [languages that CodeQL supports](https://codeql.github.com/docs/codeql-overview/supported-languages-and-frameworks/)
 * Using [BinSkim](https://github.com/microsoft/binskim) to analyze binaries
 * Using [DevSkim](https://github.com/microsoft/devskim) IDE extensions/language analyzers
+* [More best practices](https://github.com/ossf/Memory-Safety/blob/main/docs/best-practice-non-memory-safe-by-default-languages.md)
 
 #### Non-memory safe by default language automated tooling to provide additional checks to your dependencies
 
