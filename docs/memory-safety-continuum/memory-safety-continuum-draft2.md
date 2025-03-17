@@ -38,10 +38,7 @@ While new software is increasingly being written in memory safe by default langu
 
 It is and will continue to be necessary for software written in memory safe by default languages to interact with software written in non-memory safe by default languages through foreign function interfaces (FFI). FFI is one of the primary uses for unsafe blocks within Rust (as well as within other languages).
 
-There are some general best practices for interfacing between memory safe by default and non-memory-safe by default languages, as well as language-ecoystem specific practices. We have captured these enhancements in the following substages.
-
-* 2.1: Using general and language ecosystem specific best practices for safely interfacing between memory safe by default and non-memory safe by default languages ([Examples](#language-specific-best-practices))
-* 2.2: Using general best practices for safely interfacing between memory safe by default and non-memory-safe by default languages ([Examples](#general-interfacing-best-practices))
+There are some general best practices for interfacing between memory safe by default and non-memory-safe by default languages, as well as language-ecoystem specific practices. We have captured these enhancements - both general and language ecosystem specific - in this [list of best practices](https://github.com/ossf/Memory-Safety/blob/main/docs/best-practice-interfacing.md).
 
 We expect further developments in this space and will update this continuum as they emerge.
 
@@ -111,13 +108,6 @@ The amount software that has already been produced is staggering - and it is onl
 #### Memory safe by default language automated tooling to provide additional checks to your dependencies
 
 * Using a fuzzer such as [AFL++](https://github.com/AFLplusplus/AFLplusplus) on both your own code and third party code
-
-### 2. Using Memory Safe by Default Languages to interface with Non-Memory Safe By Default Languages
-
-#### General interfacing best practices
-
-* Separating all FFIs into a separate crate/module/package so that it can be audited in isolation. All exported symbols from that crate/module/package should be memory safe. [Source](https://github.com/ossf/Memory-Safety/issues/36#issuecomment-2477083785)
-* [More best practices](https://github.com/ossf/Memory-Safety/blob/main/docs/best-practice-interfacing.md)
 
 #### Language specific best practices
 
