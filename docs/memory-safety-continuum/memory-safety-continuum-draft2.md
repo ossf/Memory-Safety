@@ -109,18 +109,6 @@ The amount software that has already been produced is staggering - and it is onl
 
 * Using a fuzzer such as [AFL++](https://github.com/AFLplusplus/AFLplusplus) on both your own code and third party code
 
-#### Language specific best practices
-
-* Using the [bindgen](https://crates.io/crates/bindgen) crate
-* Using the [cbindgen](https://crates.io/crates/cbindgen) crate
-* Using the [cxx](https://crates.io/crates/cbindgen) crate
-* Avoiding using the legacy Java Native Interface (JNI) APIs. If needed, prefer the newer Foreign Function & Memory (FFM) APIs introduced in Java 22.
-* Monitoring or preventing JNI API occurrences (e.g. uses of the `native` keyword or calls to `System.load()` or `System.loadLibrary()`) in your code using [static code analysis tools](https://www.baeldung.com/tag/static-analysis).
-* If using JNI is your only option, following all the same best practices as you would with a [non memory-safe language](best-practice-non-memory-safe-by-default-languages.md).
-* Always enabling the [-Xcheck:jni JVM option](https://docs.oracle.com/javase/8/docs/technotes/guides/troubleshoot/clopts002.html#CHDHCBBG) to activate additional validation of JNI functions' arguments. Even if your code does not use JNI, your third-party dependencies might (JDBC drivers are a common example).
-* Using the [-verbose:jni JVM option](https://docs.oracle.com/javase/8/docs/technotes/guides/troubleshoot/clopts002.html#CHDCHGEE) can also be useful to detect or troubleshoot JNI issues but beware of the potential performance as it could cause a lot of extra log messages if JNI is heavily used in your application.
-* [More best practices](https://github.com/ossf/Memory-Safety/blob/main/docs/best-practice-interfacing.md)
-
 ### 3. Using Non-Memory Safe By Default Languages
 
 #### Non-memory safe by default language ecosystem best practices
