@@ -38,7 +38,9 @@ While new software is increasingly being written in memory safe by default langu
 
 It is and will continue to be necessary for software written in memory safe by default languages to interact with software written in non-memory safe by default languages through foreign function interfaces (FFI). FFI is one of the primary uses for unsafe blocks within Rust (as well as within other languages).
 
-[TO DO: Expand on this and collect best practices]
+There are some general best practices for interfacing between memory safe by default and non-memory-safe by default languages, as well as language-ecoystem specific practices. We have captured these enhancements - both general and language ecosystem specific - in this [list of best practices](https://github.com/ossf/Memory-Safety/blob/main/docs/best-practice-interfacing.md).
+
+We expect further developments in this space and will update this continuum as they emerge.
 
 ### 3. Using Non-Memory Safe By Default Languages
 
@@ -101,14 +103,11 @@ The amount software that has already been produced is staggering - and it is onl
 * Using a mutation tester such as [cargo-mutants](https://github.com/sourcefrog/cargo-mutants)
 * Using [CodeQL](https://codeql.github.com/) for the [languages that CodeQL supports](https://codeql.github.com/docs/codeql-overview/supported-languages-and-frameworks/)
 * Using [DevSkim](https://github.com/microsoft/devskim) IDE extensions/language analyzers
+* [More best practices](https://github.com/ossf/Memory-Safety/blob/main/docs/best-practice-memory-safe-by-default-languages.md)
 
 #### Memory safe by default language automated tooling to provide additional checks to your dependencies
 
 * Using a fuzzer such as [AFL++](https://github.com/AFLplusplus/AFLplusplus) on both your own code and third party code
-
-### 2. Using Memory Safe by Default Languages to interface with Non-Memory Safe By Default Languages
-
-TO DO
 
 ### 3. Using Non-Memory Safe By Default Languages
 
@@ -119,6 +118,7 @@ TO DO
 * Using the [C++ Compiler Hardening Guide](https://github.com/ossf/wg-best-practices-os-developers/tree/main/docs/Compiler-Hardening-Guides) when compiling C++ code
 * Isolating code that processes un-trusted data from code that performs direct memory management operations or uses raw pointers (see [Language-theoretic Security](https://github.com/ossf/Memory-Safety/pull/20))
 * Using [smart pointers](https://learn.microsoft.com/en-us/cpp/cpp/smart-pointers-modern-cpp?view=msvc-170)
+* [More best practices](https://github.com/ossf/Memory-Safety/blob/main/docs/best-practice-non-memory-safe-by-default-languages.md)
 
 #### Non-memory safe by default language automated tooling to provide additional checks to your code
 
@@ -131,6 +131,7 @@ TO DO
 * Using [CodeQL](https://codeql.github.com/) for the [languages that CodeQL supports](https://codeql.github.com/docs/codeql-overview/supported-languages-and-frameworks/)
 * Using [BinSkim](https://github.com/microsoft/binskim) to analyze binaries
 * Using [DevSkim](https://github.com/microsoft/devskim) IDE extensions/language analyzers
+* [More best practices](https://github.com/ossf/Memory-Safety/blob/main/docs/best-practice-non-memory-safe-by-default-languages.md)
 
 #### Non-memory safe by default language automated tooling to provide additional checks to your dependencies
 
