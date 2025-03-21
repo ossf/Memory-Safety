@@ -135,16 +135,16 @@ The amount software that has already been produced is staggering - and it is onl
 
 * Using a fuzzer such as [AFL++](https://github.com/AFLplusplus/AFLplusplus) on both your own code and third party code
 
-
 ## Contributors
 
 The Memory Safety Continuum was created by the OpenSSF Memory Safety Special Interest Group (SIG). The following people contributed to this document:
-- [Nell Shamrell-Harrington](https://github.com/nellshamrell)
-- [Avishay Balter](https://github.com/balteravishay)
-- [Gabriel Dos Reis](https://github.com/GabrielDosReis)
-- [David Edelsohn](https://github.com/edelsohn)
-- [Charles C Palmer](https://github.com/ccpalmer)
-- [Joshua J. Drake](https://github.com/jduck)
-- [David A. Wheeler](https://github.com/david-a-wheeler)
-- [Andrew Fryer](https://github.com/Andrew-Fryer)
-- [Rich Lander](https://github.com/richlander)
+
+* [Nell Shamrell-Harrington](https://github.com/nellshamrell)
+* [Avishay Balter](https://github.com/balteravishay)
+* [Gabriel Dos Reis](https://github.com/GabrielDosReis)
+* [David Edelsohn](https://github.com/edelsohn)
+* [Charles C Palmer](https://github.com/ccpalmer)
+* [Joshua J. Drake](https://github.com/jduck)
+* [David A. Wheeler](https://github.com/david-a-wheeler)
+* [Andrew Fryer](https://github.com/Andrew-Fryer)
+* [Rich Lander](https://github.com/richlander)
