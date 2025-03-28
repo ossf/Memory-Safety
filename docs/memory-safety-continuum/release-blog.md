@@ -1,17 +1,19 @@
 # Announcing the Release of "The Memory Safety Continuum"
 
-The OpenSSF's Memory Safety SIG has just released ["The Memory Safety Continuum"](./memory-safety-continuum.md). It was written with you, the developers, organizations, and security professionals in mind and it provides practical insights and strategies for enhancing your software security whereever you are on the memory safety spectrum today.
+The OpenSSF's Memory Safety SIG has just released ["The Memory Safety Continuum"](./memory-safety-continuum.md). It was written with software developers, organizations, and security professionals in mind and it provides practical insights and strategies for enhancing software security whereever you are on the memory safety spectrum today.
 
 ## Why Memory Safety Matters
 
-Memory safety is crucial because it helps prevent vulnerabilities that can lead to serious security issues. In fact, technology organisations such as Microsoft and Google previously stated that software memory safety issues are behind around 70 percent of their vulnerabilities including common programming errors like buffer overflows, use-after-free bugs, and other memory corruption issues. These vulnerabilities remain a primary source of security risks, frequently exploited by attackers and posing significant threats to organizations and end-users alike.
+Memory safety is crucial because it helps prevent vulnerabilities that can lead to serious security issues. In fact, technology organizations such as Microsoft and Google previously stated that software memory safety issues are behind around 70 percent of their vulnerabilities including common programming errors like buffer overflows, use-after-free bugs, and other memory corruption issues. These vulnerabilities remain a primary source of security risks, frequently exploited by attackers and posing significant threats to organizations and end-users alike.
 
 Recognizing this, agencies around the world have released critical guidance on addressing memory safety risks. For instance:
 
-- CISA together with the FBI, the Australian Cyber Security Centre and the Canadian Centre for Cyber Security highlight in their [case studies](https://www.cisa.gov/sites/default/files/2024-06/joint-guidance-exploring-memory-safety-in-critical-open-source-projects-508c.pdf) that memory safety vulnerabilities constitute a significant proportion of disclosed software weaknesses. These documents encourage software manufacturers to prioritize mitigating or eliminating such vulnerabilities in their products.
+- US CISA together with the FBI, the Australian Cyber Security Centre and the Canadian Centre for Cyber Security highlight in their [case studies](https://www.cisa.gov/sites/default/files/2024-06/joint-guidance-exploring-memory-safety-in-critical-open-source-projects-508c.pdf) that memory safety vulnerabilities constitute a significant proportion of disclosed software weaknesses. These documents encourage software manufacturers to prioritize mitigating or eliminating such vulnerabilities in their products.
 - NIST’s [recommendations](https://www.nist.gov/itl/ssd/software-quality-group/safer-languages) emphasize adopting safer programming languages, stating that this approach can prevent entire classes of security issues.
 - [A roadmap](https://www.cisa.gov/sites/default/files/2023-12/The-Case-for-Memory-Safe-Roadmaps-508c.pdf) created by top cybersecurity agencies highlights the need to switch to memory safe programming languages.
 - A chapter on memory safety in CISA and the FBI's [Product Security Bad Practices](https://www.cisa.gov/sites/default/files/2025-01/joint-guidance-product-security-bad-practices-508c_0.pdf) document outlines the dangers of using memory-unsafe languages for critical infrastructure.
+
+The *Communications of the ACM* in 2025 published an opinion piece, signed by many co-authors, arguing that ["It Is Time to Standardize Principles and Practices for Software Memory Safety"](https://cacm.acm.org/opinion/it-is-time-to-standardize-principles-and-practices-for-software-memory-safety/).
 
 ## How "The Memory Safety Continuum" Can Help
 
