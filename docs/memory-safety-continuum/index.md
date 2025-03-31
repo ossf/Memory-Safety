@@ -18,7 +18,7 @@ We also came to a consensus on using the terms "memory safe by default" for lang
 
 This continuum, ordered from "most safe" to "least safe", is intended to help you define and understand the memory safety of your software and what you can do to improve it. We propose that developers and organizations should use modern toolchains and follow current best practices for their software ecosystems. In particular, whenever there is a memory safe feature or workflow, it should be adopted over a non-memory safe variant.
 
-### 1. Writing software in Memory Safe By Default Languages
+### Writing software in Memory Safe By Default Languages
 
 Whenever possible/practical, you should use a memory safe by default language (such as Rust, Go, Python, Java, JavaScript, C#) when writing new software. Having memory safety incorporated directly into the language forces good safety practices at compile time as the code is being written. Developers get real time feedback as they create and compile their code. It is certainly possible and sometimes necessary to bypass some of the compiler's safety checks through the use of unsafe blocks and functions. However, memory safe by default languages force developers to intentionally choose unsafety (and, even when they do, to only use unsafety in contained and limited areas of the code), while non-memory safe by default languages depend on developers to intentionally (and continually) choose safety. If it is possible to escape into unsafe blocks, it is natural to ask whether developers will default to using them, negating the advantage of using a memory safe by default language. In 2022, as Google scaled up its use of Rust within the Android Open Source Project, they noted "In general, use of unsafe in Android’s Rust appears to be working as intended. It’s used rarely, and when it is used, it’s encapsulating behavior that’s easier to reason about and review for safety" [^1].
 
@@ -26,13 +26,13 @@ Even when a language is memory safe by default, it is still vital to follow that
 
 There are several ways to enhance the safety of your and your dependencies' code. We have captured these enhancements in these substages of this section of the continuum, ordered from most to least ideal.
 
-* 1.1: Using developer best practices and automated tooling to verify safety in both your and your dependencies' code ([Examples](#automated-tooling-to-provide-additional-checks-to-your-dependencies))
-* 1.2: Using developer best practices and automated tooling to verify safety *only* in your code ([Examples](#memory-safe-by-default-language-automated-tooling-to-provide-additional-checks-to-your-code))
-* 1.3: Using developer best practices *only* ([Examples](#memory-safe-by-default-language-ecosystem-best-practices))
+1. Using developer best practices and automated tooling to verify safety in both your and your dependencies' code ([Examples](#automated-tooling-to-provide-additional-checks-to-your-dependencies))
+2. Using developer best practices and automated tooling to verify safety *only* in your code ([Examples](#memory-safe-by-default-language-automated-tooling-to-provide-additional-checks-to-your-code))
+3. Using developer best practices *only* ([Examples](#memory-safe-by-default-language-ecosystem-best-practices))
 
 [^1]: [Memory Safe Languages in Android 13](https://security.googleblog.com/2022/12/memory-safe-languages-in-android-13.html)
 
-### 2. Using Memory Safe by Default Languages to interface with Non-Memory Safe By Default Languages
+### Using Memory Safe by Default Languages to interface with Non-Memory Safe By Default Languages
 
 While new software is increasingly being written in memory safe by default languages, there are billions of existing lines of code written in non-memory safe by default languages. Targeted rewrites of highly used, highly vulnerable software components may be necessary and beneficial to the safety of the Open Source ecosystem, but we do not advocate for mass rewrites of all existing code written in non-memory safe by default languages.
 
@@ -42,15 +42,15 @@ There are some general best practices for interfacing between memory safe by def
 
 We expect further developments in this space and will update this continuum as they emerge.
 
-### 3. Using Non-Memory Safe By Default Languages
+### Using Non-Memory Safe By Default Languages
 
 While we do advocate for writing new code in memory safe by default languages, we recognize this is not always possible or practical. Existing software must be maintained and often expanded, regardless of what language it is written in.
 
 There are several ways to enhance the safety of your and your dependencies' code when written in a non-memory safe by default language. These principles ended up being the same as with memory safe by default languages, though applied a little differently. While there are advantages and disadvantages to various language ecosystems, the principles of solid software engineering remain consistent. We have captured these enhancements in these substages of this section of the continuum, ordered from most to least ideal.
 
-* 3.1: Using developer best practices and automated tooling to verify safety in both your and your dependencies' code ([Examples](#automated-tooling-to-provide-additional-checks-to-your-dependencies))
-* 3.2: Using developer best practices and automated tooling to verify safety *only* in your code ([Examples](#non-memory-safe-by-default-language-automated-tooling-to-provide-additional-checks-to-your-code))
-* 3.3: Using developer best practices *only* ([Examples](#non-memory-safe-by-default-language-ecosystem-best-practices))
+1. Using developer best practices and automated tooling to verify safety in both your and your dependencies' code ([Examples](#automated-tooling-to-provide-additional-checks-to-your-dependencies))
+2. Using developer best practices and automated tooling to verify safety *only* in your code ([Examples](#non-memory-safe-by-default-language-automated-tooling-to-provide-additional-checks-to-your-code))
+3. Using developer best practices *only* ([Examples](#non-memory-safe-by-default-language-ecosystem-best-practices))
 
 ## Conclusion
 
@@ -86,7 +86,7 @@ The amount software that has already been produced is staggering - and it is onl
 
 ## Examples
 
-### 1. Writing software in Memory Safe By Default Languages
+### Writing software in Memory Safe By Default Languages
 
 #### Memory safe by default language ecosystem best practices
 
@@ -105,7 +105,7 @@ The amount software that has already been produced is staggering - and it is onl
 * Using [DevSkim](https://github.com/microsoft/devskim) IDE extensions/language analyzers
 * [More best practices](https://github.com/ossf/Memory-Safety/blob/main/docs/best-practice-memory-safe-by-default-languages.md)
 
-### 3. Using Non-Memory Safe By Default Languages
+### Using Non-Memory Safe By Default Languages
 
 #### Non-memory safe by default language ecosystem best practices
 
@@ -129,7 +129,7 @@ The amount software that has already been produced is staggering - and it is onl
 * Using [DevSkim](https://github.com/microsoft/devskim) IDE extensions/language analyzers
 * [More best practices](https://github.com/ossf/Memory-Safety/blob/main/docs/best-practice-non-memory-safe-by-default-languages.md)
 
-### 4. Applies To Any Language
+### Applies To Any Language
 
 #### Automated tooling to provide additional checks to your dependencies
 
