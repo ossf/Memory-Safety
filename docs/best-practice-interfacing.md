@@ -15,7 +15,7 @@ It is and will continue to be necessary for software written in memory safe by d
 * Follow [Foreign Function Interface guidance in The Rustnomicon](https://doc.rust-lang.org/nomicon/ffi.html)
 * Use the [bindgen](https://crates.io/crates/bindgen) crate
 * Use the [cbindgen](https://crates.io/crates/cbindgen) crate
-* Use the [cxx](https://crates.io/crates/cbindgen) crate
+* Use the [cxx](https://crates.io/crates/cxx) crate
 * Monitor the Rust Foundation's [Rust/C++ interop initiative](https://github.com/rustfoundation/interop-initiative)
 
 ## Go
