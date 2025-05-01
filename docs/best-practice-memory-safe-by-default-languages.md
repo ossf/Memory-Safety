@@ -33,3 +33,8 @@ TO DO
 * If `sun.misc.Unsafe` or `jdk.internal.misc.Unsafe` is your only option, follow all the same best practices as you would with a [non memory-safe language](best-practice-non-memory-safe-by-default-languages.md).
 * Monitor occurrences of `sun.misc.Unsafe` or `jdk.internal.misc.Unsafe` in your code (or prevent them) using for example [checkstyle's IllegalImport rule](https://checkstyle.org/checks/imports/illegalimport.html) configured to detect both `sun.*` and `jdk.internal.*`.
 * If FFM APIs are used, enable the compilation option `-Xlint:restricted` to detect risky usages at compile time (the option enables warnings in the `[restricted]` log category). Similar warnings are produced by default by the JVM at runtime. These warnings should be monitored and investigated as well since they could come from third-party libraries and not just from own code.
+
+## COBOL
+
+* COBOL is memory safe by default, but has options to disable buffer overflow checking.  It implements better defaults than C and C++.
+* Modern mainframes are faster, able to handle more transactions.  Memory safety checks should be encouraged.
