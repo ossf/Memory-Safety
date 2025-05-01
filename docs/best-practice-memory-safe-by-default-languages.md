@@ -36,5 +36,5 @@ TO DO
 
 ## COBOL
 
-* COBOL is memory safe by default, but has options to disable buffer overflow checking.  It implements better defaults than C/C++.
+* COBOL is memory safe by default, but has options to disable buffer overflow checking.  It implements better defaults than C and C++.
 * Modern mainframes are faster, able to handle more transactions.  Memory safety checks should be encouraged.
