@@ -22,6 +22,14 @@ It is and will continue to be necessary for software written in memory safe by d
 
 ## .NET
 
+* Follow .NET's [Native interoperability best practices](https://learn.microsoft.com/dotnet/standard/native-interop/best-practices)
+
+Recommended APIs and tooling
+* Use `LibraryImport` for C functions calls, if possible
+* Use `GeneratedComInterface` or `GeneratedComClass` for COM interop, if possible
+* Use source generation whenever possible for interop
+* When targeting the Win32 API, use [CsWin32](https://github.com/microsoft/CsWin32) to help define correct function signatures
+
 ## JavaScript
 
 ## Java
