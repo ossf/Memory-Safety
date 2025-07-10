@@ -20,6 +20,10 @@ It is and will continue to be necessary for software written in memory safe by d
 
 ## Go
 
+* Go is itself a memory safe language as long as you don't use the unsafe package. The [rules for using the unsafe package safely](https://pkg.go.dev/unsafe) explain the requirements, particularly in the description of the Pointer type.
+
+* Go interacts with other languages using a tool called cgo. The [rules for passing pointers](https://pkg.go.dev/cmd/cgo#hdr-Passing_pointers) provide the details.
+
 ## .NET
 
 ## JavaScript
