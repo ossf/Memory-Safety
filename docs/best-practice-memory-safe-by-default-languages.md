@@ -16,7 +16,8 @@ TO DO
 
 ## Go
 
-* Use the [unsafe package](https://pkg.go.dev/unsafe#pkg-overview) is sometimes necessary when using C from Go. Be careful (TO DO: Add more about how to be careful)
+* Go is itself a memory safe language as long as you don't use the unsafe package.
+* Use of the [unsafe package](https://pkg.go.dev/unsafe#pkg-overview) is sometimes necessary when using C from Go. The [rules for using the unsafe package safely](https://pkg.go.dev/unsafe) explain the requirements, particularly in the description of the Pointer type.
 * Use the [Go data race detector](https://go.dev/doc/articles/race_detector) to check for data race conditions
 * Follow the [Security Best Practices for Go Developers](https://go.dev/doc/security/best-practices)
 
