@@ -24,6 +24,11 @@ TO DO
 
 * Use unsafe blocks sparingly and [follow guidance](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/unsafe-code)
 
+## Swift
+
+* Enable [Swift 6 data race safety checking](https://swift.org/migration/documentation/swift-6-concurrency-migration-guide/enabledataracesafety)
+* Avoid the use of unsafe types and functions, including when using C APIs
+
 ## JavaScript
 
 * Follow the [Memory management guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_management)
